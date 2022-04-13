@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<script>
+
+//  Data will come depending on route
+
+let bubble_data = {{ bubble_data| tojson}}  
+let insertion_data = {{ insertion_data| tojson}} 
+
+    console.log(bubble_data)
+    console.log(insertion_data)
+</script>
+
+<div class="container">
+    checking
+
+</div>
+
+{% endblock %}
