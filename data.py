@@ -56,8 +56,8 @@ quiz_data = {
     },
     "2": {
         'type': 'draggable',
-        'topic': 'Drag and Drop elements on how they would look after the thrid pass of Bubble Sort',
-        'prompt': '',
+        'topic': 'Bubble Sort',
+        'prompt': 'Drag and Drop elements on how they would look after the thrid pass of Bubble Sort',
         'input': [4, 13, 6, 8, 21],
         'answer': [4, 6, 8, 13, 21]
     },
