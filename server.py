@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 bubble_data = data.get_bubble_data()
 insertion_data = data.get_insertion_data()
+quiz_data = data.get_quiz_data()
 
 header_age = 'public, max-age=0'
 
@@ -29,7 +30,7 @@ def learn(id):
 @app.route('/quiz/<id>')
 def quiz(id):
     response = make_response(render_template(
-        'quiz.html', bubble_data = bubble_data, insertion_data = insertion_data))
+        'quiz.html', quiz_data = quiz_data))
     response.headers['Cache-Control'] = header_age
     return response
 
