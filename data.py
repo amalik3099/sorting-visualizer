@@ -51,8 +51,8 @@ quiz_data = {
         'type': 'draggable',
         'topic': 'Bubble Sort',
         'prompt': 'Drag and Drop elements on how they would look after the second pass of Bubble Sort',
-        'input': [13, 8, 5, 17],
-        'answer': [8, 5, 13, 17]
+        'input': [13, 8, 5, 17, 21],
+        'answer': [8, 5, 13, 17, 21]
     },
     "2": {
         'type': 'draggable',
@@ -65,8 +65,8 @@ quiz_data = {
         'type': 'draggable',
         'topic': 'Insertion Sort',
         'prompt': 'Drag and Drop elements on how they would look after the second pass of Insertion Sort',
-        'input': [13, 8, 5, 17],
-        'answer': [5, 8, 13, 17]
+        'input': [13, 8, 5, 17, 21],
+        'answer': [5, 8, 13, 17, 21]
     }, 
     "4": {
         'type': 'draggable',
