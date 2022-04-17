@@ -3,14 +3,56 @@
 {% block content %}
 
 <script>
-//  Data will come depending on route
-let bubble_data = {{ bubble_data| tojson}}  
-let insertion_data = {{ insertion_data| tojson}} 
+    //  Data will come depending on route
+
 </script>
 
 <div class="container">
-    checking
-    
+    <div class="quizheader">Quiz</div>
+    <div class="row center quizquestion">
+        Drag and Drop elements on how they would look after the second pass of Insertion Sort
+    </div>
+
+    <div class="row align-items-end">
+        <div class="col-3"></div>
+        <div class="col-1" id="input1">
+
+            <div class="quizbar"></div>
+            4
+
+        </div>
+        <div class="col-0.5"></div>
+        <div class="col-1" id="input2">
+            <div class="quizbar"></div>
+            13
+        </div>
+        <div class="col-0.5"></div>
+        <div class="col-1" id="input3">
+            <div class="quizbar"></div>
+            6
+        </div>
+        <div class="col-0.5"></div>
+        <div class="col-1" id="input4">
+            <div class="quizbar"></div>
+            8
+        </div>
+        <div class="col-0.5"></div>
+        <div class="col-1" id="input5">
+            <div class="quizbar"></div>
+            21
+        </div>
+        <div class="col-2" id="input6"></div>
+    </div>
+
+    <div class="bottombutton center">
+        <button type="button" class="btn btn-primary btn-lg" aria-label="Left Align">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span>Next Question</span>
+        </button>
+    </div>
+
+
+
 </div>
 
 {% endblock %}

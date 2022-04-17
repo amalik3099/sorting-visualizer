@@ -334,6 +334,25 @@ textarea {
     }
 }
 
+.quizheader{
+    background-color: #b5e3ec;
+    padding: 40px;
+    font-size: 20px;
+}
+
+.quizquestion{
+    padding: 40px;
+}
+
+.bottombutton{
+    margin-top: 40px;
+}
+.quizbar{
+    background-color: #1992a9;
+    height:40px;
+    width: 50%;
+}
+
 /* .button-53 {
     background-color: #9983e0;
     border: 0 solid #E5E7EB;

@@ -13,6 +13,7 @@ quiz_data = data.get_quiz_data()
 
 header_age = 'public, max-age=0'
 
+
 @app.route('/')
 def homepage():
     response = make_response(render_template(
@@ -20,17 +21,19 @@ def homepage():
     response.headers['Cache-Control'] = header_age
     return response
 
+
 @app.route('/learn/<id>')
 def learn(id):
     response = make_response(render_template(
-        'learn.html', bubble_data = bubble_data, insertion_data = insertion_data))
+        'learn.html', bubble_data=bubble_data, insertion_data=insertion_data))
     response.headers['Cache-Control'] = header_age
     return response
+
 
 @app.route('/quiz/<id>')
 def quiz(id):
     response = make_response(render_template(
-        'quiz.html', quiz_data = quiz_data))
+        'quiz.html', quiz_data=quiz_data))
     response.headers['Cache-Control'] = header_age
     return response
 
