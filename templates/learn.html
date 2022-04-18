@@ -117,7 +117,7 @@
                 let back = $("<button id='back' class='btn btn-primary'>")
                 $(back).text("<")
                 $(back).click(function (e) {
-                    window.location.href = "/learn/" + (step - 1).toString();
+                    window.location.href = "/learn/" + (parseInt(id) - 1).toString();
                 })
                 $(back_div).append(back)
                 $(row).append(back_div)
@@ -128,7 +128,7 @@
                 let next = $("<button id='next' class='btn btn-primary'>")
                 $(next).text(">")
                 $(next).click(function (e) {
-                    window.location.href = "/learn/" + (step + 1).toString();
+                    window.location.href = "/learn/" + (parseInt(id) + 1).toString();
                 })
                 $(next_div).append(next)
                 $(row).append(next_div)
