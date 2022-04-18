@@ -2,9 +2,14 @@
 
 {% block content %}
 
+<!-- JavaScript file -->
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz_end.js') }}"></script>
+
 <script>
     //  Data will come depending on route
-
+    let quiz_data = {{quiz_data| tojson}}
+    let id = {{id| tojson}}
+    let user_answers = {{user_answers| tojson}}
 </script>
 
 <body>
@@ -13,6 +18,7 @@
         <div class="row center quizquestion">
             Congratulation on finishing the quiz!
         </div>
+        <div class="row center score" id="score_div"></div>
         <div class="btn btn-primary">
             <button type="button" class="btn btn-primary btn-lg" id="retry_btn" aria-label="Left Align">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -22,11 +28,5 @@
     
     </div>
 </body>
-
-<script type="text/javascript">
-    $("#retry_btn").click(function() {
-        window.location.href="/quiz/" + 1
-    })
-</script>
 
 {% endblock %}

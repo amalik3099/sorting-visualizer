@@ -2,6 +2,9 @@
 
 {% block content %}
 
+<!-- JavaScript file -->
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+
 <script>
     let quiz_data = {{quiz_data| tojson}}
     let id = {{id| tojson}}
@@ -16,11 +19,11 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">{{quiz_data.option1}}</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg" id="option1">{{quiz_data.option1}}</button>
         </div>
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">{{quiz_data.option2}}</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg" id="option2">{{quiz_data.option2}}</button>
         </div>
         <div class="col-2"></div>
 
@@ -29,11 +32,11 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">{{quiz_data.option3}}</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg" id="option3">{{quiz_data.option3}}</button>
         </div>
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">{{quiz_data.option4}}</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg" id="option4">{{quiz_data.option4}}</button>
         </div>
         <div class="col-2"></div>
 
@@ -45,11 +48,5 @@
         </button>
     </div>
 </div>
-
-<script type="text/javascript">
-    $("#next_btn").click(function() {
-        window.location.href="/quiz/" + (parseInt(quiz_data["id"])+1)
-    })
-</script>
 
 {% endblock %}

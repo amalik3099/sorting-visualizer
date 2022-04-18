@@ -13,12 +13,16 @@ bubble_data = data.get_bubble_data()
 insertion_data = data.get_insertion_data()
 quiz_data = data.get_quiz_data()
 times_data = []
+user_answers = {}
+current_id = 0
 
 header_age = 'public, max-age=0'
 
 
 @app.route('/')
 def homepage():
+    global homepage_data
+
     response = make_response(render_template(
         'homepage.html', homepage_data=homepage_data))
     response.headers['Cache-Control'] = header_age
@@ -27,6 +31,9 @@ def homepage():
 
 @app.route('/learn/<id>')
 def learn(id=None):
+    global bubble_data
+    global insertion_data
+
     times_data.append({
         'id': id,
         'time': datetime.datetime.now()
@@ -40,6 +47,10 @@ def learn(id=None):
 
 @app.route('/quiz/<id>')
 def quiz(id=None):
+    global quiz_data
+    global user_answers
+    global current_id
+
     if int(id) in range(0, 5):
         quiz = quiz_data[id]
         response = make_response(render_template(
@@ -50,9 +61,28 @@ def quiz(id=None):
             'quiz.html', quiz_data=quiz, id=id))
     else:
         response = make_response(render_template(
-            'quiz_end.html', quiz_data=quiz_data, id=id))
+            'quiz_end.html', quiz_data=quiz_data, id=id, user_answers=user_answers))
+        print(user_answers)
+        user_answers = {}
+        current_id = 0
     response.headers['Cache-Control'] = header_age
     return response
+
+
+# AJAX FUNCTIONS
+
+@app.route('/quiz/save_answer', methods=['GET', 'POST'])
+def save_answer():
+    global user_answers 
+    global current_id
+
+    answer = request.get_json()  
+    # add new entry to array with 
+    # a new id and the name the user sent in JSON
+    current_id += 1
+    user_answers[str(current_id)] = answer['answer']
+    #send back id of new watch
+    return jsonify(user_answers=user_answers)
 
 
 if __name__ == '__main__':
