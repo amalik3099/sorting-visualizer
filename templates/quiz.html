@@ -2,27 +2,25 @@
 
 {% block content %}
 
-
-
 <script>
-
-    let quiz_data = {{ quiz_data| tojson}}
-
+    let quiz_data = {{quiz_data| tojson}}
+    let id = {{id| tojson}}
 </script>
 
 <div class="container">
     <div class="quizheader">Quiz</div>
+    <div class="row center topic">{{quiz_data.topic}}</div>
     <div class="row center quizquestion">
-        What will array become after first &nbsp<strong> swap </strong>&nbsp in bubble sort for input [2, 1, 4, 3] ?
+        {{quiz_data.prompt}}
     </div>
     <div class="row">
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">Secondary</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">{{quiz_data.option1}}</button>
         </div>
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">Secondary</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">{{quiz_data.option2}}</button>
         </div>
         <div class="col-2"></div>
 
@@ -31,21 +29,27 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">Secondary</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">{{quiz_data.option3}}</button>
         </div>
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">Secondary</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg">{{quiz_data.option4}}</button>
         </div>
         <div class="col-2"></div>
 
     </div>
     <div class="bottombutton center">
-        <button type="button" class="btn btn-primary btn-lg" aria-label="Left Align">
+        <button type="button" class="btn btn-primary btn-lg" id="next_btn" aria-label="Left Align">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span>Next Question</span>
         </button>
     </div>
 </div>
+
+<script type="text/javascript">
+    $("#next_btn").click(function() {
+        window.location.href="/quiz/" + (parseInt(quiz_data["id"])+1)
+    })
+</script>
 
 {% endblock %}

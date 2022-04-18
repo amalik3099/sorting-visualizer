@@ -349,8 +349,14 @@ textarea {
 }
 .quizbar{
     background-color: #1992a9;
-    height:40px;
+    height: 40px;
     width: 50%;
+}
+
+.topic{
+    margin-top: 15px;
+    size: 20px;
+    font-weight: 700;
 }
 
 /********************learning CSS****************************************/

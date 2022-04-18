@@ -32,9 +32,18 @@ def learn(id=None):
 
 
 @app.route('/quiz/<id>')
-def quiz(id):
-    response = make_response(render_template(
-        'quiz.html', quiz_data=quiz_data))
+def quiz(id=None):
+    if int(id) in range(0, 5):
+        quiz = quiz_data[id]
+        response = make_response(render_template(
+            'draggable_quiz.html', quiz_data=quiz, id=id))
+    elif int(id) in range(5, 11):
+        quiz = quiz_data[id]
+        response = make_response(render_template(
+            'quiz.html', quiz_data=quiz, id=id))
+    else:
+        response = make_response(render_template(
+            'quiz_end.html', quiz_data=quiz_data, id=id))
     response.headers['Cache-Control'] = header_age
     return response
 

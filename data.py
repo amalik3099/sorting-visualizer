@@ -56,6 +56,7 @@ insertion_data = {
 
 quiz_data = {
     "1": {
+        'id': '1',
         'type': 'draggable',
         'topic': 'Bubble Sort',
         'prompt': 'Drag and Drop elements on how they would look after the second pass of Bubble Sort',
@@ -63,6 +64,7 @@ quiz_data = {
         'answer': [8, 5, 13, 17, 21]
     },
     "2": {
+        'id': '2',
         'type': 'draggable',
         'topic': 'Bubble Sort',
         'prompt': 'Drag and Drop elements on how they would look after the thrid pass of Bubble Sort',
@@ -70,6 +72,7 @@ quiz_data = {
         'answer': [4, 6, 8, 13, 21]
     },
     "3": {
+        'id': '3',
         'type': 'draggable',
         'topic': 'Insertion Sort',
         'prompt': 'Drag and Drop elements on how they would look after the second pass of Insertion Sort',
@@ -77,6 +80,7 @@ quiz_data = {
         'answer': [5, 8, 13, 17, 21]
     }, 
     "4": {
+        'id': '4',
         'type': 'draggable',
         'topic': 'Insertion Sort',
         'prompt': 'Drag and Drop elements on how they would look after the second pass of Insertion Sort',
@@ -84,6 +88,7 @@ quiz_data = {
         'answer': [4, 6, 13, 8, 21]
     }, 
     "5": {
+        'id': '5',
         'type': 'multiple choice',
         'topic': 'Bubble Sort',
         'prompt': 'What will the array [2, 1, 4, 3] look like after first the first swap performed by the Bubble Sort Algorithm?',
@@ -96,6 +101,7 @@ quiz_data = {
             2 is compared with 1. Since 2 is larger than 1, their order is swapped"
     }, 
     "6": {
+        'id': '6',
         'type': 'multiple choice',
         'topic': 'Bubble Sort',
         'prompt': 'What is the best case time complexity of Bubble Sort?',
@@ -109,6 +115,7 @@ quiz_data = {
             is used to check whether the values are swapped at least once in the inner loop"
     },
     "7": {
+        'id': '7',
         'type': 'multiple choice',
         'topic': 'Bubble Sort',
         'prompt': 'The number of swaps required to sort the array [8, 22, 7, 9, 31, 5, 13] in ascending order is: ',
@@ -125,6 +132,7 @@ quiz_data = {
             Total 10 swaps are required to sort the array'
     },
     "8": {
+        'id': '8',
         'type': 'multiple choice',
         'topic': 'Insertion Sort',
         'prompt': 'What are steps taken by insertion sort to sort the array [5, 4, 3, 2, 1] completely?',
@@ -140,6 +148,7 @@ quiz_data = {
             the key will always be the newly inserted value and all the values will be compared to that key and inserted in to proper position.'
     },
     "9": {
+        'id': '9',
         'type': 'multiple choice',
         'topic': 'Insertion Sort',
         'prompt': 'What is the worst case time complexity of insertion sort?',
@@ -153,6 +162,7 @@ quiz_data = {
             one step right to create a gap where the data will be inserted'
     },
     "10": {
+        'id': '10',
         'type': 'multiple choice',
         'topic': 'Insertion Sort',
         'prompt': 'Consider the array [6, 4, 8, 1, 3]. The cost of each move is 10 dollars. What is associated cost of insertion sort when element 4\

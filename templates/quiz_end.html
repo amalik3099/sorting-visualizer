@@ -7,15 +7,26 @@
 
 </script>
 
-<div class="container">
-    <div class="quizheader">Quiz</div>
-    <div class="row center quizquestion">
-        Congratulation on finishing the quiz!
+<body>
+    <div class="container">
+        <div class="quizheader">Quiz</div>
+        <div class="row center quizquestion">
+            Congratulation on finishing the quiz!
+        </div>
+        <div class="btn btn-primary">
+            <button type="button" class="btn btn-primary btn-lg" id="retry_btn" aria-label="Left Align">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span>Retry</span>
+            </button>
+        </div>
+    
     </div>
-    <div class="btn btn-primary">
-        retry
-    </div>
+</body>
 
-</div>
+<script type="text/javascript">
+    $("#retry_btn").click(function() {
+        window.location.href="/quiz/" + 1
+    })
+</script>
 
 {% endblock %}
