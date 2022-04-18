@@ -3,20 +3,192 @@
 {% block content %}
 
 
-<script>
+    <script>
 
-//  Data will come depending on route
+        //  Data will come depending on route
 
-let bubble_data = {{ bubble_data| tojson}}  
-let insertion_data = {{ insertion_data| tojson}} 
+        let bubble_data = {{ bubble_data| tojson}};
+        let insertion_data = {{ insertion_data| tojson}};
+        let id = {{ id| tojson}};
 
-    console.log(bubble_data)
-    console.log(insertion_data)
-</script>
+        let data
 
-<div class="container">
-    checking
+        $(document).ready(function () {
+            if (id <= 3)
+                data = bubble_data
+            else
+                data = insertion_data
 
-</div>
+            if (id % 3 === 0)
+                step = 3
+            else
+                step = id % 3
+
+            let title = $("<div>")
+            $(title).text(data["title"])
+            $("#main_section").append(title)
+
+            let intro = $("<div>")
+            $(intro).text("MATCH THE STEPS")
+            $("#main_section").append(intro)
+
+            let row = $("<div class='row'>")
+
+            let gif_div = $("<div class='col-md-4'>")
+            let gif = $("<img class='gif' src=''>")
+            $(gif).attr("src", data["gif"])
+            $(gif_div).append(gif)
+            $(row).append(gif_div)
+
+            let interaction = $("<div class='col-md-4'>")
+            //TODO: interaction
+            $(interaction).text("TODO: interaction")
+            $(row).append(interaction)
+
+            let steps = $("<div class='col-md-4'>")
+            let step1 = $("<div id='step1'>")
+            $(step1).text("Step 1")
+            $(steps).append(step1)
+
+            let step2 = $("<div id='step1'>")
+            $(step2).text("Step 2")
+            $(steps).append(step2)
+
+            let step3 = $("<div id='step1'>")
+            $(step3).text("Step 3")
+            $(steps).append(step3)
+
+            $(row).append(steps)
+
+            $("#main_section").append(row)
+
+
+            let intro_button = $("<button id='intro_button' class='btn btn-primary'>")
+            $(intro_button).text("Intro")
+            $(intro_button).click(function (e) {
+                window.location.href = "/";
+            })
+            $("#intro_div").append(intro_button)
+
+            let bubble_button = $("<button id='bubble_button' class='btn btn-primary'>")
+            $(bubble_button).text("Bubble Sort")
+            $(bubble_button).click(function (e) {
+                window.location.href = "/learn/1";
+            })
+            $("#bubble_div").append(bubble_button)
+
+            let insertion_button = $("<button id='insertion_button' class='btn btn-primary'>")
+            $(insertion_button).text("Insertion Sort")
+            $(insertion_button).click(function (e) {
+                window.location.href = "/learn/4";
+            })
+            $("#insertion_div").append(insertion_button)
+
+            let quiz_button = $("<button id='quiz_button' class='btn btn-primary'>")
+            $(quiz_button).text("Quiz")
+            $(quiz_button).click(function (e) {
+                window.location.href = "/quiz/1";
+            })
+            $("#quiz_div").append(quiz_button)
+
+            let instruction = $("<div>")
+            $(instruction).text(data[step].description)
+            $("#page").append(instruction)
+
+            row = $("<div class='row'>")
+
+            let last_section_div = $("<div>")
+            let last_section = $("<button id='last_section' class='btn btn-primary'>")
+            $(last_section).text("<<")
+            if (id <= 3) {
+                $(last_section).click(function (e) {
+                    window.location.href = "/";
+                })
+            } else {
+                $(last_section).click(function (e) {
+                    window.location.href = "/learn/1";
+                })
+            }
+            $(last_section_div).append(last_section)
+            $(row).append(last_section_div)
+
+            if (step !== 1) {
+                let back_div = $("<div>")
+                let back = $("<button id='back' class='btn btn-primary'>")
+                $(back).text("<")
+                $(back).click(function (e) {
+                    window.location.href = "/learn/" + (step - 1).toString();
+                })
+                $(back_div).append(back)
+                $(row).append(back_div)
+            }
+
+            if (step !== 3) {
+                let next_div = $("<div>")
+                let next = $("<button id='next' class='btn btn-primary'>")
+                $(next).text(">")
+                $(next).click(function (e) {
+                    window.location.href = "/learn/" + (step + 1).toString();
+                })
+                $(next_div).append(next)
+                $(row).append(next_div)
+            }
+
+            let next_section_div = $("<div>")
+            let next_section = $("<button id='next_section' class='btn btn-primary'>")
+            $(next_section).text(">>")
+            if (id <= 3) {
+                $(next_section).click(function (e) {
+                    window.location.href = "/learn/4";
+                })
+            } else {
+                $(next_section).click(function (e) {
+                    window.location.href = "/quiz/1";
+                })
+            }
+            $(next_section_div).append(next_section)
+            $(row).append(next_section_div)
+
+            let help_div = $("<div>")
+            $(help_div).text("Need Help?")
+            let help = $("<button id='next_section' class='btn btn-primary'>")
+            $(help).text("?")
+            let dialog = $("<div id='dialog' title=''>")
+            $(dialog).attr("title", data["help"].title)
+            let description = $("<div class='help_des_div'>")
+            $(description).text(data['help'].description)
+            $(dialog).append(description)
+            $(help).click(function (e) {
+                $(dialog).dialog({
+                    buttons: {
+                        "continue with Tutorial": function () {
+                            $(this).dialog("close")
+                        },
+                    },
+                    modal: true
+                })
+            })
+            $(help_div).append(help)
+            $(row).append(help_div)
+
+            $("#page").append(row)
+        })
+    </script>
+
+    <div id="page" class="container">
+        <div class="row">
+            <div id="main_section" class="col-md-10"></div>
+
+            <div id="button_section" class="col-md-2">
+                <div id="intro_div"></div>
+
+                <div id="bubble_div"></div>
+
+                <div id="insertion_div"></div>
+
+                <div id="quiz_div"></div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

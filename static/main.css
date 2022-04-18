@@ -353,6 +353,15 @@ textarea {
     width: 50%;
 }
 
+/********************learning CSS****************************************/
+.gif {
+    width: 300px
+}
+
+.help_text_div {
+    z-index:999
+}
+
 /* .button-53 {
     background-color: #9983e0;
     border: 0 solid #E5E7EB;
