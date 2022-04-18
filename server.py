@@ -6,11 +6,13 @@ from flask import render_template
 from flask import Response, request, jsonify
 import data
 app = Flask(__name__)
+import datetime
 
 homepage_data = data.get_homepage_data()
 bubble_data = data.get_bubble_data()
 insertion_data = data.get_insertion_data()
 quiz_data = data.get_quiz_data()
+times_data = []
 
 header_age = 'public, max-age=0'
 
@@ -25,6 +27,11 @@ def homepage():
 
 @app.route('/learn/<id>')
 def learn(id=None):
+    times_data.append({
+        'id': id,
+        'time': datetime.datetime.now()
+    });
+    print(times_data[-1]);
     response = make_response(render_template(
         'learn.html', bubble_data=bubble_data, insertion_data=insertion_data, id=id))
     response.headers['Cache-Control'] = header_age
