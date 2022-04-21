@@ -352,7 +352,11 @@ textarea {
     height: 40px;
     width: 50%;
 }
-
+.error_handler{
+    margin-top: 20px;
+    text-align: center;
+    color: red;
+}
 .topic{
     margin-top: 15px;
     size: 20px;

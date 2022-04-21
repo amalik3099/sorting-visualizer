@@ -44,25 +44,36 @@ function submitRecord(value) {
 }
 
 $(document).ready(function () {
+    $("#error_handler").hide()
     let value = ""
     $("#option1").click(function() {
+        $("#error_handler").hide()
         value = $("#option1").text()
         console.log(value)
     })
     $("#option2").click(function() {
+        $("#error_handler").hide()
         value = $("#option2").text()
         console.log(value)
     })
     $("#option3").click(function() {
+        $("#error_handler").hide()
         value = $("#option3").text()
         console.log(value)
     })
     $("#option4").click(function() {
+        $("#error_handler").hide()
         value = $("#option4").text()
         console.log(value)
     })
     $("#next_btn").click(function() {
-        submitRecord(value)
-        window.location.href="/quiz/" + (parseInt(quiz_data["id"])+1)
+        if (value == "") {
+            $("#error_handler").show()
+        }
+        else {
+            $("#error_handler").hide()
+            submitRecord(value)
+            window.location.href="/quiz/" + (parseInt(quiz_data["id"])+1)
+        }
     }) 
 })
