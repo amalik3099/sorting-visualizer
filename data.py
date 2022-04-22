@@ -98,7 +98,7 @@ quiz_data = {
         'option4': '1, 2, 4, 3',
         'answer': '1, 2, 4, 3',
         'explanation': "The first swap in bubble sort starts by comparing the number at the first index with the number at the second. Therefore, \
-            2 is compared with 1. Since 2 is larger than 1, their order is swapped"
+            2 is compared with 1. Since 2 is larger than 1, their order is swapped."
     }, 
     "6": {
         'id': '6',
@@ -112,7 +112,7 @@ quiz_data = {
         'answer': 'n',
         'explanation': "The bubble sort is at its best if the input data is sorted. i.e. If the input data is sorted \
             in the same order as expected output. This can be achieved by using one boolean variable. The boolean variable \
-            is used to check whether the values are swapped at least once in the inner loop"
+            is used to check whether the values are swapped at least once in the inner loop."
     },
     "7": {
         'id': '7',
@@ -129,7 +129,7 @@ quiz_data = {
             3 : 7, 8, 5, 9, 13, 22, 31 = 1 swap, \
             4 : 7, 5, 8, 9, 13, 22, 31 = 1 swap, \
             5 : 5, 7, 8, 9, 13, 22, 31 = 1 swap. \
-            Total 10 swaps are required to sort the array'
+            Total 10 swaps are required to sort the array.'
     },
     "8": {
         'id': '8',
@@ -159,7 +159,7 @@ quiz_data = {
         'answer': 'n^2',
         'explanation': ' This is because insertion of a data at an appropriate position involves two steps: \
             1. Calculate the position. 2. Shift the data from the position calculated in step #1 \
-            one step right to create a gap where the data will be inserted'
+            one step right to create a gap where the data will be inserted.'
     },
     "10": {
         'id': '10',
@@ -172,7 +172,7 @@ quiz_data = {
         'option3': '30 dollars',
         'option4': '5 dollars',
         'answer': '10 dollars',
-        'explanation': 'When element 4 reaches the first position of the array, only 1 computation will be made. Therefore, the associated cost is 10 dollars'
+        'explanation': 'When element 4 reaches the first position of the array, only 1 computation will be made. Therefore, the associated cost is 10 dollars.'
     }
 }
 
