@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+  </head>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+  <script src="./ppc.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+  />
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .top{
+        width: 35%;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 0;
+        margin: 0px 20px 0 10px;
+    }
+    .contain{
+        margin-right: 20px;
+    }
+    .ppctitle{
+        width: 100px;
+        padding: 20px 10px;
+        font-weight: bold;
+        background-color: lightblue;
+    }
+    .nonppctitle{
+        width: 100px;
+        padding: 20px 10px;
+        font-weight: bold;
+        background-color: lightblue;
+    }
+    .item{
+        border: 1px solid lightgray;
+        width: 100px;
+    }
+    .z{
+        z-index: 9999;
+    }
+    .item:hover {
+      background-color: lightyellow;
+      cursor: move;
+      border: 1px solid black;
+    }
+    header{
+        font-size: larger;
+    }
+    .dark{
+        filter: brightness(75%);
+    }
+    .darker{
+        filter: brightness(50%);
+    }
+    .jumbotron{
+        margin: 0 20px 20px 20px;
+    }
+    .container{
+        margin: 0 20px 20px 20px;
+
+    }
+  </style>
+  <body>
+      <header class="jumbotron">Party Planning Committee</header>
+    <div class="container">
+      <div class="contain">
+        <div class="nonppctitle">Non-PPC</div>
+        <div class="nonppc">
+        </div>
+    </div>
+      <div class="contain">
+        <div class="ppctitle">PPC</div>
+        <div class="ppc">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

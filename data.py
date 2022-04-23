@@ -13,17 +13,17 @@ bubble_data = {
         'title': 'Introduction to Bubble Sort',
         'description': "Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order. Bubble sort is a sorting algorithm that compares two adjacent elements and swaps them until they are not in the intended order. Just like the movement of air bubbles in the water that rise up to the surface, each element of the array move to the end in each iteration. Therefore, it is called a bubble sort."
     },
-    '1': {
+    'Step1': {
         'array': [29, 10, 14, 37],
         'state': 'false',
         'description': 'Swap 29 and 10 as 29 > 10'
     },
-    '2': {
+    'Step2': {
         'array': [10, 29, 14, 37],
         'state': 'false',
         'description': 'Swap 29 and 10 as 29 > 10'
     },
-    '3': {
+    'Step3': {
         'array': [10, 14, 29, 37],
         'state': 'false',
         'description': 'Swap 29 and 10 as 29 > 10'

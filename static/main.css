@@ -1,3 +1,7 @@
+.container{
+    background-color: #eaeaea;
+}
+
 .padding_zero {
     padding: 0px;
     margin: 0px;
@@ -384,6 +388,76 @@ textarea {
 .help_text_div {
     z-index:999
 }
+
+
+.bar{
+    height: 200px;
+    width: 40px;
+    background-color: lightskyblue;
+    margin-right: 15px;
+    justify-content: space-around;
+}
+
+.learnbar2{
+    height: 130px;
+}
+
+.learnbar1{
+    height: 170px;
+}
+
+.learnbar3{
+    height: 140px;
+}
+
+.learnbar4{
+    height: 200px;
+}
+
+.heighta {
+    height: 130px;
+}
+
+.heightb{
+    height: 140px;
+}
+.heightc{
+    height: 170px;
+}
+.heightd{
+    height: 200px;
+}
+
+.bar-parent{
+    margin-top: 50px;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+#tick{
+    height: 20px;
+}
+
+#touch{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 60px;
+    top: 10px;
+}
+
+/* .down{
+    position: absolute;
+    top: 180px;
+    left: 10px;
+} */
+
 
 /* .button-53 {
     background-color: #9983e0;

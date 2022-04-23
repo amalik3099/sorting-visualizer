@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+
+
 {% block content %}
 
 
@@ -14,11 +16,16 @@
         let data
 
         $(document).ready(function () {
-            if (id <= 3)
+            if (id <= 3){
                 data = bubble_data
-            else
+                bubble = true
+                insertion = false
+            }
+            else {
                 data = insertion_data
-
+                insertion = true
+                bubble = false
+            }
             if (id % 3 === 0)
                 step = 3
             else
@@ -42,7 +49,24 @@
 
             let interaction = $("<div class='col-md-4'>")
             //TODO: interaction
-            $(interaction).text("TODO: interaction")
+            $(interaction).html(`
+        <div class="row align-items-end bar-parent">
+            <div class="col-3"></div>
+            <div><div class="bar learnbar1" id = "bar1" >
+                <span id="d1" class='down'>{{bubble_data.Step1.array[0]}}</span>  
+            </div>
+              
+            </div>
+            <div><div class="bar learnbar2" id="bar2"><span id="d2" class='down'>{{bubble_data.Step1.array[1]}}</span> </div>
+            </div>
+            <div><div class="bar learnbar3" id="bar3"><span id="d3" class='down'>{{bubble_data.Step1.array[2]}}</span> </div>
+            </div>
+            <div><div class="bar learnbar4" id="bar4"><span id="d4" class='down'>{{bubble_data.Step1.array[3]}}</span> </div>
+            </div>
+        </div>
+        <div id="instruction"><img class='gif' id="touch" src="https://media2.giphy.com/media/e0BQsk91PB8Te5OlXx/200w.webp?cid=ecf05e477pfq9hy0zi737j7poomohq6nzt6p7qq28t69s7z8&rid=200w.webp&ct=g" /></div>
+
+            `)
             $(row).append(interaction)
 
             let steps = $("<div class='col-md-4'>")
@@ -50,13 +74,13 @@
             $(step1).text("Step 1")
             $(steps).append(step1)
 
-            let step2 = $("<div id='step1'>")
+            let step2 = $("<div id='step2'>")
             $(step2).text("Step 2")
             $(steps).append(step2)
 
-            let step3 = $("<div id='step1'>")
-            $(step3).text("Step 3")
-            $(steps).append(step3)
+            // let step3 = $("<div id='step3'>")
+            // $(step3).text("Step 3")
+            // $(steps).append(step3)
 
             $(row).append(steps)
 
@@ -92,8 +116,8 @@
             $("#quiz_div").append(quiz_button)
 
             let instruction = $("<div>")
-            $(instruction).text(data[step].description)
-            $("#page").append(instruction)
+            // $(instruction).text(data[step].description)
+            // $("#page").append(instruction)
 
             row = $("<div class='row'>")
 
@@ -175,6 +199,9 @@
         })
     </script>
 
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
+
+
     <div id="page" class="container">
         <div class="row">
             <div id="main_section" class="col-md-10"></div>
@@ -185,7 +212,6 @@
                 <div id="bubble_div"></div>
 
                 <div id="insertion_div"></div>
-
                 <div id="quiz_div"></div>
             </div>
         </div>
