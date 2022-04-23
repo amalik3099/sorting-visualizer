@@ -97,43 +97,6 @@
                 $("#main_section").append(row)
             }
 
-
-            let intro_button = $("<button id='intro_button' class='side_button'>")
-            $(intro_button).text("Intro")
-            $(intro_button).click(function (e) {
-                window.location.href = "/";
-            })
-            $("#intro_div").append(intro_button)
-
-            let bubble_button = $("<button id='bubble_button' class='side_button'>")
-            if (id <= 4)
-                $(bubble_button).addClass("bold_text")
-            $(bubble_button).text("Bubble Sort")
-            $(bubble_button).click(function (e) {
-                window.location.href = "/learn/1";
-            })
-            $("#bubble_div").append(bubble_button)
-
-            let insertion_button = $("<button id='insertion_button' class='side_button'>")
-            if (id > 4)
-                $(insertion_button).addClass("bold_text")
-            $(insertion_button).text("Insertion Sort")
-            $(insertion_button).click(function (e) {
-                window.location.href = "/learn/5";
-            })
-            $("#insertion_div").append(insertion_button)
-
-            let quiz_button = $("<button id='quiz_button' class='side_button'>")
-            $(quiz_button).text("Quiz")
-            $(quiz_button).click(function (e) {
-                window.location.href = "/quiz/1";
-            })
-            $("#quiz_div").append(quiz_button)
-
-            // let instruction = $("<div>")
-            // $(instruction).text(data[step].description)
-            // $("#page").append(instruction)
-
             row = $("<div class='row'>")
 
             if (step !== 1) {
@@ -167,16 +130,7 @@
 
     <div id="page" class="container">
         <div class="row">
-            <div id="main_section" class="col-md-10"></div>
-
-            <div id="button_section" class="col-md-2">
-                <div id="intro_div"></div>
-
-                <div id="bubble_div"></div>
-
-                <div id="insertion_div"></div>
-                <div id="quiz_div"></div>
-            </div>
+            <div id="main_section" class="col-md-12"></div>
         </div>
     </div>
 
