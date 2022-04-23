@@ -385,8 +385,44 @@ textarea {
     width: 300px
 }
 
-.help_text_div {
-    z-index:999
+.side_button {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    width: 110px;
+    height: 70px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: lightgreen;
+}
+
+.bold_text {
+    font-weight: bold;
+}
+
+.back_button {
+    width: 40px;
+    height: 25px;
+    margin-left: 120px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: lightblue;
+    color: blue;
+    text-align: center;
+}
+
+.next_button {
+    width: 40px;
+    height: 25px;
+    margin-left: 10px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: lightblue;
+    color: blue;
+    text-align: center;
 }
 
 
