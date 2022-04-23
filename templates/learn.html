@@ -36,8 +36,14 @@
 
             if (step === 1) {
                 let intro = $("<div>")
-                $(intro).text("TODO: text and explanation")
+                $(intro).text(data['help'].description)
                 $("#main_section").append(intro)
+
+                let gif_div = $("<div>")
+                let gif = $("<img class='gif' src=''>")
+                $(gif).attr("src", data["gif"])
+                $(gif_div).append(gif)
+                $("#main_section").append(gif_div)
             } else {
                 let intro = $("<div>")
                 $(intro).text("MATCH THE STEPS")
