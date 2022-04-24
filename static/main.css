@@ -536,8 +536,17 @@ margin-left: 50px;
 
 /********************draggable quiz CSS****************************************/
 .destination-container-hover {
-    background-color: lightyellow;
+    color: lightyellow;
   }
+.quizoption{
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+
+}
+#sortable{
+    padding-left: 30%;
+}
+
 
 /* .down{
     position: absolute;
