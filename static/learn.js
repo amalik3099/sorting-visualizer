@@ -115,6 +115,30 @@ $(document).ready(function () {
             child.height(val * 10)
 
             $('#animatelearn').sortable({
+                start: function(event, ui) {
+                    var start_pos = ui.item.index();
+                    ui.item.data('start_pos', start_pos);
+                },
+                change: function(event, ui) {
+                    var start_pos = ui.item.data('start_pos');
+                    var index = ui.placeholder.index();
+                    console.log("START POS")
+                    console.log(start_pos)
+                    console.log("INDEX")
+                    console.log(index)
+                    if (start_pos < index) {
+                        // $('#sortable li:nth-child(' + index + ')').addClass('highlights');
+                        $('#bar2').addClass('yellow')
+                    } else {
+                        $('#sortable li:eq(' + (index + 1) + ')').addClass('highlights');
+                    }
+                },
+                update: function(event, ui) {
+                    $('#sortable li').removeClass('highlights');
+                }
+                // update: function(event, ui) {
+                //     $('#sortable li').removeClass('highlights');
+                // }
             });
             
             // $('#bar2').addClass('yellow')
