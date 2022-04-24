@@ -61,7 +61,9 @@ quiz_data = {
         'topic': 'Bubble Sort',
         'prompt': 'Drag and Drop elements on how they would look after the second pass of Bubble Sort',
         'input': [13, 8, 5, 17, 21],
-        'answer': [8, 5, 13, 17, 21]
+        'answer': [8, 5, 13, 17, 21],
+        'explanation': "Drag and drop the numbered bars to their correct sorted order following the instructions above. Remember, \
+            Bubble Sort works by repeatedly swapping the adjacent elements if they are in the wrong order."
     },
     "2": {
         'id': '2',
@@ -69,7 +71,9 @@ quiz_data = {
         'topic': 'Bubble Sort',
         'prompt': 'Drag and Drop elements on how they would look after the thrid pass of Bubble Sort',
         'input': [4, 13, 6, 8, 21],
-        'answer': [4, 6, 8, 13, 21]
+        'answer': [4, 6, 8, 13, 21],
+        'explanation': "Drag and drop the numbered bars to their correct sorted order following the instructions above. Remember, \
+            Bubble Sort works by repeatedly swapping the adjacent elements if they are in the wrong order."
     },
     "3": {
         'id': '3',
@@ -77,7 +81,11 @@ quiz_data = {
         'topic': 'Insertion Sort',
         'prompt': 'Drag and Drop elements on how they would look after the second pass of Insertion Sort',
         'input': [13, 8, 5, 17, 21],
-        'answer': [5, 8, 13, 17, 21]
+        'answer': [5, 8, 13, 17, 21],
+        'explanation': "Drag and drop the numbered bars to their correct sorted order following the instructions above. Remember, \
+            Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. \
+                At each iteration, insertion sort removes one element from the input data, finds the location it belongs \
+                within the sorted list, and inserts it there. It repeats until no input elements remain."
     }, 
     "4": {
         'id': '4',
@@ -85,7 +93,11 @@ quiz_data = {
         'topic': 'Insertion Sort',
         'prompt': 'Drag and Drop elements on how they would look after the second pass of Insertion Sort',
         'input': [4, 13, 6, 8, 21],
-        'answer': [4, 6, 13, 8, 21]
+        'answer': [4, 6, 13, 8, 21],
+        'explanation': "Drag and drop the numbered bars to their correct sorted order following the instructions above. Remember, \
+            Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. \
+                At each iteration, insertion sort removes one element from the input data, finds the location it belongs \
+                within the sorted list, and inserts it there. It repeats until no input elements remain."
     }, 
     "5": {
         'id': '5',
