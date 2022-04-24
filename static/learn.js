@@ -6,6 +6,8 @@ function bubblef() {
     $("#bar1").draggable({
         revert: "invalid",
         drag: function(event, ui){
+            $('#animatelearn').sortable({
+            });
             $('#bar2').addClass('yellow')
             $('#instruction').html('<p>Swap 29 and 14 as 29 is greater than 14</p>')
 
@@ -25,6 +27,8 @@ function bubblef() {
     $("#bar2").draggable({
         revert: "invalid",
         drag: function(event, ui){
+            $('#animatelearn').sortable({
+            });
             if(step1){
             $('#bar3').addClass('yellow') }
         },
@@ -92,9 +96,48 @@ function insertionf() {
             });
 }
 
+
+
+$("#animatelearn").change(function(){
+    alert("The text has been changed.");
+  });
+
 $(document).ready(function () {
     
-    if(bubble) bubblef();   
-    else insertionf(); 
+    if(bubble){ 
+
+        $.each(bubble_data.Step1.array, function (index, val) {
+
+            let str1 = "#input".concat(index.toString());
+            let str2 = "#quizbar".concat(index.toString());
+            var parent = $(str1),
+                child = parent.children(str2);
+            child.height(val * 10)
+
+            $('#animatelearn').sortable({
+            });
+            
+            // $('#bar2').addClass('yellow')
+            // $('#instruction').html('<p>Swap 29 and 14 as 29 is greater than 14</p>')
+
+        });
+        // bubblef();
+
+    }
+    else {
+        $.each(insertion_data.input, function (index, val) {
+
+            let str1 = "#input".concat(index.toString());
+            let str2 = "#quizbar".concat(index.toString());
+            var parent = $(str1),
+                child = parent.children(str2);
+            child.height(val * 10)
+
+            $('#sortable').sortable({
+
+            });
+        });
+        // insertionf();
+    } 
 
 })
