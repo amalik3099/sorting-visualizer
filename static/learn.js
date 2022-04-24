@@ -25,9 +25,12 @@ function bubblef() {
     $("#bar2").draggable({
         revert: "invalid",
         drag: function(event, ui){
+            if(step1){
             $('#bar3').addClass('yellow')
+            }
         },
         stop: function(event, ui){
+            if(step1){
             $('#bar2').removeClass('heightc')
             $('#bar3').removeClass('yellow')
             $('#d2').text('14')
@@ -39,6 +42,7 @@ function bubblef() {
             $('.bar').addClass('green') 
             $('#instruction').html('<p>All Sorted<p><p>Good Job!</p>')
         }
+    }
         });
 }
 
