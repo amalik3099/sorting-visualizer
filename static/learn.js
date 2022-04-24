@@ -26,8 +26,7 @@ function bubblef() {
         revert: "invalid",
         drag: function(event, ui){
             if(step1){
-            $('#bar3').addClass('yellow')
-            }
+            $('#bar3').addClass('yellow') }
         },
         stop: function(event, ui){
             if(step1){
@@ -40,9 +39,8 @@ function bubblef() {
             $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
             step2 = true   
             $('.bar').addClass('green') 
-            $('#instruction').html('<p>All Sorted<p><p>Good Job!</p>')
+            $('#instruction').html('<p>All Sorted<p><p>Good Job!</p>') }
         }
-    }
         });
 }
 
@@ -50,6 +48,7 @@ function insertionf() {
     let step1 = false
     let step2 = false
     let step3 = false
+    let step4 = false
 
     $("#bar1").draggable({
         revert: "invalid",
@@ -70,7 +69,7 @@ function insertionf() {
             $('#bar2').addClass('heightb')
             $('#bar3').addClass('heightc')
             $('#step1').html('<span>Step 1</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
-            step1 = true    
+            step3 = true    
             $('#instruction').html('<p><strong>Drag 37<strong> is in correct position as it is greater than all</p>')
         }
         });
@@ -78,15 +77,17 @@ function insertionf() {
         $("#bar4").draggable({
             revert: "invalid",
             drag: function(event, ui){
-                $('.bar').addClass('green')
+                if(step3){
+                $('.bar').addClass('green')}
             },
             stop: function(event, ui){
+                if(step3){
                 $('#bar4').removeClass('yellow')
                 $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
                 step1 = true    
                 $('#instruction').html(`<p>Also now we see every other number is also in its correct position</p>
                 <p>Good Job</p>
-                `)
+                `)}
             }
             });
 }
