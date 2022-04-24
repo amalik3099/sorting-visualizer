@@ -425,6 +425,34 @@ textarea {
     text-align: center;
 }
 
+.sort_title {
+    font-weight: bold;
+    color: orange;
+    font-size: 26px;
+}
+
+.text_title {
+    font-weight: bold;
+    color: orange;
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.main_text {
+    font-size: 20px;
+    padding-bottom: 40px;
+}
+
+.algo {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.complexity {
+    font-size: 24px;
+    padding-top: 20px;
+}
+
 
 .bar{
     height: 200px;

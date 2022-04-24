@@ -30,20 +30,41 @@
             else
                 step = id % 4
 
-            let title = $("<div>")
+            let title = $("<div class='sort_title'>")
             $(title).text(data["title"])
             $("#main_section").append(title)
 
             if (step === 1) {
-                let intro = $("<div>")
+                let title = $("<div class='text_title'>")
+                $(title).text(data["help"].title)
+                $("#main_section").append(title)
+
+                let intro = $("<div class='main_text'>")
                 $(intro).text(data['help'].description)
                 $("#main_section").append(intro)
 
-                let gif_div = $("<div>")
+                let row = $("<div class='row'>")
+                let algo_div = $("<div class='col-6'>")
+
+                for (key in data["help"].algorithm) {
+                    let algo = $("<div class='algo'>")
+                    $(algo).text(key + ": " + data["help"].algorithm[key])
+                    $(algo_div).append(algo)
+                }
+
+                let complexity = $("<div class='complexity'>")
+                $(complexity).text("Time complexity: " + data['help'].complexity)
+                $(algo_div).append(complexity)
+
+                $(row).append(algo_div)
+
+                let gif_div = $("<div class='col-6'>")
                 let gif = $("<img class='gif' src=''>")
-                $(gif).attr("src", data["gif"])
+                $(gif).attr("src", data["help"].image)
                 $(gif_div).append(gif)
-                $("#main_section").append(gif_div)
+                $(row).append(gif_div)
+
+                $("#main_section").append(row)
             } else {
                 let intro = $("<div>")
                 $(intro).text("MATCH THE STEPS")
