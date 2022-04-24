@@ -99,7 +99,7 @@
 
             row = $("<div class='row'>")
 
-            if (step !== 1) {
+            if (id != 1) {
                 let back_div = $("<div>")
                 let back = $("<button id='back' class='back_button'>")
                 $(back).text("<")
@@ -110,16 +110,17 @@
                 $(row).append(back_div)
             }
 
-            if (step !== 4) {
-                let next_div = $("<div>")
-                let next = $("<button id='next' class='next_button'>")
-                $(next).text(">")
-                $(next).click(function (e) {
+            let next_div = $("<div>")
+            let next = $("<button id='next' class='next_button'>")
+            $(next).text(">")
+            $(next).click(function (e) {
+                if (id == 8)
+                    window.location.href = "/quiz/1";
+                else
                     window.location.href = "/learn/" + (parseInt(id) + 1).toString();
-                })
-                $(next_div).append(next)
-                $(row).append(next_div)
-            }
+            })
+            $(next_div).append(next)
+            $(row).append(next_div)
 
             $("#page").append(row)
         })
