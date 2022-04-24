@@ -11,7 +11,15 @@ bubble_data = {
     'gif': 'https://s1.ax1x.com/2022/04/18/LaBssO.gif',
     'help': {
         'title': 'Introduction to Bubble Sort',
-        'description': "Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order. Bubble sort is a sorting algorithm that compares two adjacent elements and swaps them until they are not in the intended order. Just like the movement of air bubbles in the water that rise up to the surface, each element of the array move to the end in each iteration. Therefore, it is called a bubble sort."
+        'description': "Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order. Bubble sort is a sorting algorithm that compares two adjacent elements and swaps them until they are not in the intended order. Just like the movement of air bubbles in the water that rise up to the surface, each element of the array move to the end in each iteration. Therefore, it is called a bubble sort.",
+        'image': "https://cdn.programiz.com/cdn/farfuture/kn1zM7ZGIj60jcTe3mv8gAtbrvFHqxgqfQ7F9MdjPuA/mtime:1582112622/sites/tutorial2program/files/Bubble-sort-0.png",
+        'algorithm': [
+            '1', 'Starting from the first index, compare the first and the second elements.',
+            '2', 'If the first element is greater than the second element, they are swapped.',
+            '3', 'Now, compare the second and the third elements. Swap them if they are not in order.',
+            '4', 'The above process goes on until the last element.'
+        ],
+        'complexity': "O(n2)" 
     },
     'Step1': {
         'array': [29, 10, 14, 37],
@@ -35,7 +43,14 @@ insertion_data = {
     'gif': 'https://s1.ax1x.com/2022/04/18/LaByLD.gif',
     'help': {
         'title': 'Introduction to Insertion Sort',
-        'description': "Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part. Algorithm To sort an array of size n in ascending order: 1: Iterate from arr[1] to arr[n] over the array. 2: Compare the current element (key) to its predecessor. 3: If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element."
+        'description': "Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part. Algorithm To sort an array of size n in ascending order: 1: Iterate from arr[1] to arr[n] over the array. 2: Compare the current element (key) to its predecessor. 3: If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.",
+        'image': 'https://media.geeksforgeeks.org/wp-content/uploads/insertionsort.png',
+        'algorithm': [ 
+            "1", "Iterate from arr[1] to arr[n] over the array.",
+            "2", "Compare the current element (key) to its predecessor.",
+            "3", "If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element."
+        ],
+        'complexity': "O(n2)" 
     },
     '1': {
         'array': [29, 10, 14, 37],
