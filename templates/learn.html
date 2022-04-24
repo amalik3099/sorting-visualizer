@@ -102,7 +102,7 @@
             if (id != 1) {
                 let back_div = $("<div>")
                 let back = $("<button id='back' class='back_button'>")
-                $(back).text("<")
+                $(back).text("back")
                 $(back).click(function (e) {
                     window.location.href = "/learn/" + (parseInt(id) - 1).toString();
                 })
@@ -112,7 +112,7 @@
 
             let next_div = $("<div>")
             let next = $("<button id='next' class='next_button'>")
-            $(next).text(">")
+            $(next).text("next")
             $(next).click(function (e) {
                 if (id == 8)
                     window.location.href = "/quiz/1";
