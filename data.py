@@ -52,17 +52,17 @@ insertion_data = {
         },
         'complexity': "O(n2)" 
     },
-    '1': {
+    'Step1': {
         'array': [29, 10, 14, 37],
         'state': 'false',
         'description': 'Inserting 29 in its correct place so swap 29 and 10'
     },
-    '2': {
+    'Step2': {
         'array': [10, 29, 14, 37],
         'state': 'false',
         'description': 'Inserting 29 in its correct place so swap 29 and 14'
     },
-    '3': {
+    'Step3': {
         'array': [10, 14, 29, 37],
         'state': 'false',
         'description': '10, 14 and 37 we check similarly their correct position'

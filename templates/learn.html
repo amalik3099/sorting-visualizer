@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 
 
-
 {% block content %}
 
 
@@ -16,7 +15,7 @@
         let data
 
         $(document).ready(function () {
-            if (id <= 4) {
+            if (id <= 2) {
                 data = bubble_data
                 bubble = true
                 insertion = false
@@ -25,10 +24,10 @@
                 insertion = true
                 bubble = false
             }
-            if (id % 4 === 0)
-                step = 4
+            if (id % 2 === 0)
+                step = 2
             else
-                step = id % 4
+                step = id % 2
 
             let title = $("<div class='sort_title'>")
             $(title).text(data["title"])
@@ -81,22 +80,18 @@
                 let interaction = $("<div class='col-md-4'>")
                 //TODO: interaction
                 $(interaction).html(`
-        <div class="row align-items-end bar-parent">
-            <div class="col-3"></div>
-            <div><div class="bar learnbar1" id = "bar1" >
-                <span id="d1" class='down'>{{bubble_data.Step1.array[0]}}</span>
+           <div id = "sortab" class="row align-items-end bar-parent">
+            <div id = "bar1"><div class="bar heightc" id="learnbar1"><span id="d1" class='down'>{{bubble_data.Step1.array[0]}}</span></div>
             </div>
-
+            <div id = "bar2"><div class="bar heighta" id="learnbar2"><span id="d2" class='down'>{{bubble_data.Step1.array[1]}}</span> </div>
             </div>
-            <div><div class="bar learnbar2" id="bar2"><span id="d2" class='down'>{{bubble_data.Step1.array[1]}}</span> </div>
+            <div id = "bar3"><div class="bar heightb" id="learnbar3"><span id="d3" class='down'>{{bubble_data.Step1.array[2]}}</span> </div>
             </div>
-            <div><div class="bar learnbar3" id="bar3"><span id="d3" class='down'>{{bubble_data.Step1.array[2]}}</span> </div>
-            </div>
-            <div><div class="bar learnbar4" id="bar4"><span id="d4" class='down'>{{bubble_data.Step1.array[3]}}</span> </div>
+            <div id = "bar4"><div class="bar heightd" id="learnbar4"><span id="d4" class='down'>{{bubble_data.Step1.array[3]}}</span> </div>
             </div>
         </div>
         <div id="instruction"><img class='gif' id="touch" src="https://media2.giphy.com/media/e0BQsk91PB8Te5OlXx/200w.webp?cid=ecf05e477pfq9hy0zi737j7poomohq6nzt6p7qq28t69s7z8&rid=200w.webp&ct=g" /></div>
-
+        <div id="instruct">Swap 29 and 14 as 29 is greater than 14</div>
             `)
                 $(row).append(interaction)
 
@@ -135,7 +130,7 @@
             let next = $("<button id='next' class='next_button'>")
             $(next).text("next")
             $(next).click(function (e) {
-                if (id == 8)
+                if (id == 4)
                     window.location.href = "/quiz/1";
                 else
                     window.location.href = "/learn/" + (parseInt(id) + 1).toString();

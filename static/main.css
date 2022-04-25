@@ -458,9 +458,24 @@ textarea {
     height: 200px;
     width: 40px;
     background-color: lightskyblue;
-    margin-right: 15px;
     justify-content: space-around;
+    margin-left: 5px;
 }
+
+/* 
+#bar1 {
+    margin-right: 15px;
+}
+#bar2 {
+    margin-right: 15px;
+}
+#bar3 {
+    margin-right: 15px;
+}
+#bar4 {
+    margin-right: 15px;
+} */
+
 
 .learnbar2{
     height: 130px;
@@ -508,12 +523,22 @@ textarea {
     height: 20px;
 }
 
+#instruct{
+    margin-top: 20px;
+}
+
+.left{
+    position: relative;
+    left: 30px;
+}
+
 #touch{
     height: 40px;
     width: 40px;
     position: relative;
-    left: 60px;
+    /* left: 60px; */
     top: 10px;
+    right: 10px;
 }
 
 .sidenav {
@@ -574,6 +599,12 @@ margin-left: 50px;
 #sortable{
     padding-left: 30%;
 }
+
+#bb1{
+    display: flex;
+    flex-direction: row;
+}
+
 
 
 /* .down{
