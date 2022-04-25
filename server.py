@@ -33,12 +33,14 @@ def homepage():
 def learn(id=None):
     global bubble_data
     global insertion_data
+    global user_time
 
     times_data.append({
         'id': id,
         'time': datetime.datetime.now()
     });
     print(times_data[-1]);
+    # user_time = times_data[-1].time - times_data[0].time 
     response = make_response(render_template(
         'learn.html', bubble_data=bubble_data, insertion_data=insertion_data, id=id))
     response.headers['Cache-Control'] = header_age

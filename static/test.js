@@ -6,7 +6,7 @@ function bubblef(bubble_data) {
         drag: function(event, ui){
             console.log("draggable")
             $('#learnbar2').addClass('yellow')
-            $('#instruct').html('<p>DROP at 1st position since 29 > 10</p>')
+            $('#instruct').html('<p>DROP HERE</p>')
             $('#instruction').html('')
         },
         stop: function(event, ui){
@@ -42,7 +42,7 @@ function bubblef(bubble_data) {
                     if(step1){
                     console.log("bar 2 draggable")
                     $('#learnbar3').addClass('yellow')
-                    $('#instruct').html('<p>DROP at 3rd position since 29 > 14</p>')
+                    $('#instruct').html('<p>DROP at 3rd position</p>')
                     $('#instruction').html('')
                     }
                     else{
@@ -97,7 +97,7 @@ function insertionf(insertion_data) {
             console.log("draggable")
             $('#learnbar2').addClass('yellow')
             $('#learnbar3').addClass('yellow')
-            $('#instruct').html('<p>DROP at 3rd position since 29s correct position is 3rd after 10 and 14</p>')
+            $('#instruct').html('<p>DROP HERE</p>')
             $('#instruction').html('')
         },
         stop: function(event, ui){
@@ -124,7 +124,7 @@ function insertionf(insertion_data) {
             </div>
             <div id = "bar4"><div class="bar heightd" id="learnbar4"><span id="d4" class='down'>${insertion_data.Step3.array[3]}</span> </div>
             </div>`)
-            $('#instruct').html('<p>Now put 37 is in correct position as it is greater than all (hint 4th)</p>')
+            $('#instruct').html('<p>Now 37 is in correct position as it is greater than all</p>')
             $('#step1').html('<span>Step 1</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
             step1=true
             $("#bar4").draggable({
@@ -139,16 +139,12 @@ function insertionf(insertion_data) {
                     else{
                         $('#instruct').html('<p>Check everything in correct position</p>')
                     }
-                    $('.bar').addClass('green')
-                    $('#instruct').html('<p><p>All Sorted<p><p>Good Job!</p></p>')
-                    $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
-     
                 },
                 stop: function(event, ui){
                     if(step1){
                     $('#learnbar3').removeClass('yellow')
                     }
-                    $("#bar4").droppable({
+                    $("#bar3").droppable({
                         revert: "invalid",
                         over: function(event, ui){
                             if(step1){
