@@ -406,12 +406,12 @@ textarea {
 #ans_tick{
     display: inline-block;
     margin-left: 10px;
-    color: red;
+    color: green;
 }
 #ans_wrong{
     display: inline-block;
     margin-left: 10px;
-    color: green
+    color: red
 }
 .modal-title{
     font-size: 15px;
