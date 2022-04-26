@@ -47,21 +47,30 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="/learn/1">Learn</a>
+          <!-- <a class="nav-link" href="/learn/1">Learn</a> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Learn
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/learn/1">Bubble Sort</a>
+              <a class="dropdown-item" href="/learn/3">Insertion Sort</a>
+            </div>
+          </li>
           <a class="nav-link" href="/quiz/1">Quiz</a>
         </div>
       </div>
-      <span id="open_sidebar" style="font-size:25px; cursor:pointer; float: right;">&#9776;</span>
+      <!-- <span id="open_sidebar" style="font-size:25px; cursor:pointer; float: right;">&#9776;</span> -->
     </div>
   </nav>
 
-  <div id="mySidenav" class="sidenav">
+  <!-- <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn">&times;</a>
     <a class="home_btn" id="sidebar_options">Home</a>
     <a class="bubble_btn" id="sidebar_options">Bubble Sort</a>
     <a class="insertion_btn" id="sidebar_options">Insertion Sort</a>
     <a class="quiz_btn" id="sidebar_options">Quiz</a>
-  </div>
+  </div> -->
 
   <div class="container">
     {% block content %}
