@@ -88,11 +88,16 @@
                 <span>Next Question</span>
             </button>
         </div>
-        <div class="help_div" id="help_div">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" id="help_btn" data-toggle="modal" data-target="#exampleModalCenter">
-                Help?
-            </button>
+        <div class="row help_div" id="help_div">
+            <div class="col-md-10" id="progress_div">
+                <div id="progress_question">Question {{quiz_data.id}} of 10</div>
+            </div>
+            <div class="col-md-2" id="help_btn_div">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" id="help_btn" data-toggle="modal" data-target="#exampleModalCenter">
+                    Help?
+                </button>
+            </div>
         </div>
     </div>
 </body>
