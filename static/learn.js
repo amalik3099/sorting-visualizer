@@ -7,10 +7,12 @@ function bubblef(bubble_data) {
             console.log("draggable")
             $('#learnbar2').addClass('yellow')
             $('#instruct').html('<p>DROP at 1st position since 29 > 10</p>')
-            $('#instruction').html('')
+            // $('#instruction').html('')
+            $('#instruction').addClass('left')
         },
         stop: function(event, ui){
             $('#learnbar2').removeClass('yellow')
+            $('#instruction').removeClass('left')
         }
     });
 
@@ -25,6 +27,7 @@ function bubblef(bubble_data) {
         },
         drop: function (event, ui) {
             $('#sortab').empty()
+            $('#instruction').addClass('leftd')
             $('#sortab').html(`<div id = "bar1"><div class="bar heighta" id="learnbar1"><span id="d1" class='down'>${bubble_data.Step2.array[0]}</span></div>
             </div>
             <div id = "bar2"><div class="bar heightc" id="learnbar2"><span id="d2" class='down'>${bubble_data.Step2.array[1]}</span> </div>
@@ -44,7 +47,7 @@ function bubblef(bubble_data) {
                     console.log("bar 2 draggable")
                     $('#learnbar3').addClass('yellow')
                     $('#instruct').html('<p>DROP at 3rd position since 29 > 14</p>')
-                    $('#instruction').html('')
+                    $('#instruction').addClass('leftt')
                     }
                     else{
                         $('#instruct').html('<p>Dont touch that one do the first step first</p>')
@@ -52,6 +55,7 @@ function bubblef(bubble_data) {
                 },
                 stop: function(event, ui){
                     if(step1){
+                    $('#instruction').removeClass('leftt')
                     $('#learnbar3').removeClass('yellow')
                     }
                     $("#bar3").droppable({
@@ -76,6 +80,7 @@ function bubblef(bubble_data) {
                                 <div id = "bar4"><div class="bar heightd" id="learnbar4"><span id="d4" class='down'>${bubble_data.Step3.array[3]}</span> </div>
                                 </div>`)
                             $('.bar').addClass('green')
+                            $('#instruction').hide()
                             $('#instruct').html('<p><p>All Sorted<p><p>Good Job!</p></p>')
                             // $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
                             $('#step2').html('<span>Step 1</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset=""><span class="step-description">29 has been swapped with 14<span>')
@@ -100,10 +105,13 @@ function insertionf(insertion_data) {
             $('#learnbar2').addClass('yellow')
             $('#learnbar3').addClass('yellow')
             $('#instruct').html('<p>DROP at 3rd position since 29s correct position is 3rd after 10 and 14</p>')
-            $('#instruction').html('')
+            $('#instruction').addClass('leftt')
+
         },
         stop: function(event, ui){
             $('#learnbar2').removeClass('yellow')
+            $('#learnbar3').removeClass('yellow')
+            $('#instruction').removeClass('leftt')
         }
     });
 
@@ -111,12 +119,12 @@ function insertionf(insertion_data) {
         revert: "invalid",
         over: function(event, ui){
             console.log("droppable")
-            
         },
         out: function(event, ui){
 
         },
         drop: function (event, ui) {
+            $('#instruction').addClass('lefttd')
             $('#sortab').empty()
             $('#sortab').html(`<div id = "bar1"><div class="bar heighta" id="learnbar1"><span id="d1" class='down'>${insertion_data.Step3.array[0]}</span></div>
             </div>
@@ -144,7 +152,7 @@ function insertionf(insertion_data) {
                     $('.bar').addClass('green')
                     $('#instruct').html('<p><p>All Sorted<p><p>Good Job!</p></p>')
                     $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset=""><span class="step-description">37 has been put in 4th position<span>')
-     
+                    $('#instruction').hide()
                 },
                 stop: function(event, ui){
                     if(step1){

@@ -565,7 +565,22 @@ textarea {
 
 .left{
     position: relative;
-    left: 30px;
+    left: 45px;
+}
+
+.leftd{
+    position: relative;
+    left: 45px;
+}
+
+.leftt{
+    position: relative;
+    left: 90px;
+}
+
+.lefttd{
+    position: relative;
+    left: 135px;
 }
 
 #touch{
