@@ -34,7 +34,8 @@ function bubblef(bubble_data) {
             <div id = "bar4"><div class="bar heightd" id="learnbar4"><span id="d4" class='down'>${bubble_data.Step2.array[3]}</span> </div>
             </div>`)
             $('#instruct').html('<p>Nice work! Now swap 29 and 14 since 29 is greater than 14</p>')
-            $('#step1').html('<span>Step 1</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
+            // $('#step1').html('<span>Step 1</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
+            $('#step1').html('<span>Step 1</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset=""><span class="step-description">29 has been swapped with 10<span>')
             step1=true
             $("#bar2").draggable({
                 revert: "invalid",
@@ -76,7 +77,8 @@ function bubblef(bubble_data) {
                                 </div>`)
                             $('.bar').addClass('green')
                             $('#instruct').html('<p><p>All Sorted<p><p>Good Job!</p></p>')
-                            $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
+                            // $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
+                            $('#step2').html('<span>Step 1</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset=""><span class="step-description">29 has been swapped with 14<span>')
                             step1=true
                             }
                         },
@@ -125,7 +127,7 @@ function insertionf(insertion_data) {
             <div id = "bar4"><div class="bar heightd" id="learnbar4"><span id="d4" class='down'>${insertion_data.Step3.array[3]}</span> </div>
             </div>`)
             $('#instruct').html('<p>Now put 37 is in correct position as it is greater than all (hint 4th)</p>')
-            $('#step1').html('<span>Step 1</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
+            $('#step1').html('<span>Step 1</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset=""><span class="step-description">29 has been put in 3rd position<span>')
             step1=true
             $("#bar4").draggable({
                 revert: "invalid",
@@ -141,7 +143,7 @@ function insertionf(insertion_data) {
                     }
                     $('.bar').addClass('green')
                     $('#instruct').html('<p><p>All Sorted<p><p>Good Job!</p></p>')
-                    $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
+                    $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset=""><span class="step-description">37 has been put in 4th position<span>')
      
                 },
                 stop: function(event, ui){
@@ -171,7 +173,7 @@ function insertionf(insertion_data) {
                                 </div>`)
                             $('.bar').addClass('green')
                             $('#instruct').html('<p><p>All Sorted<p><p>Good Job!</p></p>')
-                            $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
+                            $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset=""><span class="step-description">37 has been put in 4th position<span>')
                             step1=true
                             }
                         },
