@@ -15,7 +15,7 @@
         let data
 
         $(document).ready(function () {
-            if (id <= 2) {
+            if (id <= 3) {
                 data = bubble_data
                 bubble = true
                 insertion = false
@@ -24,24 +24,20 @@
                 insertion = true
                 bubble = false
             }
-            if (id % 2 === 0)
-                step = 2
+            if (id % 3 === 0)
+                step = 3
             else
-                step = id % 2
+                step = id % 3
 
             let title = $("<div class='sort_title'>")
             $(title).text(data["title"])
             $("#main_section").append(title)
 
-            if (step === 1) {
-                let title = $("<div class='text_title'>")
-                $(title).text(data["help"].title)
-                $("#main_section").append(title)
-
+            if (step == 1) {
                 let intro = $("<div class='main_text'>")
                 $(intro).text(data['help'].description)
                 $("#main_section").append(intro)
-
+            } else if (step == 2) {
                 let row = $("<div class='row'>")
                 let algo_div = $("<div class='col-6'>")
 
@@ -65,7 +61,7 @@
 
                 $("#main_section").append(row)
             } else {
-                let intro = $("<div>")
+                let intro = $("<div class='main_text'>")
                 $(intro).text("MATCH THE STEPS")
                 $("#main_section").append(intro)
 
@@ -96,11 +92,11 @@
                 $(row).append(interaction)
 
                 let steps = $("<div class='col-md-4'>")
-                let step1 = $("<div id='step1'>")
+                let step1 = $("<div id='step1' class='main_text'>")
                 $(step1).text("Step 1")
                 $(steps).append(step1)
 
-                let step2 = $("<div id='step2'>")
+                let step2 = $("<div id='step2' class='main_text'>")
                 $(step2).text("Step 2")
                 $(steps).append(step2)
 
@@ -113,7 +109,7 @@
                 $("#main_section").append(row)
             }
 
-            row = $("<div class='row'>")
+            row = $("<div class='row button_padding'>")
 
             if (id != 1) {
                 let back_div = $("<div>")
@@ -130,7 +126,7 @@
             let next = $("<button id='next' class='next_button'>")
             $(next).text("next")
             $(next).click(function (e) {
-                if (id == 4)
+                if (id == 6)
                     window.location.href = "/quiz/1";
                 else
                     window.location.href = "/learn/" + (parseInt(id) + 1).toString();

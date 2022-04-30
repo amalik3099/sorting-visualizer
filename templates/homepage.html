@@ -9,55 +9,36 @@
         let homepage_data = {{ homepage_data| tojson}};
 
         $(document).ready(function () {
-            let title = $("<div>")
+            let title = $("<div class='sort_title'>")
             $(title).text(homepage_data["title"])
             $("#main_section").append(title)
 
-            let intro = $("<div>")
+            let intro = $("<div class='main_text'>")
             $(intro).text(homepage_data["intro"])
             $("#main_section").append(intro)
 
-            let row = $("<div class='row'>")
-
-            let bubble = $("<div class='col-md-4'>")
+            let bubble = $("<div class='center1'>")
             let bubble_gif = $("<img class='gif' src=''>")
             $(bubble_gif).attr("src", homepage_data["bubble_gif"])
             $(bubble).append(bubble_gif)
-            $(row).append(bubble)
 
-            let insertion = $("<div class='col-md-4'>")
-            let insertion_gif = $("<img class='gif' src=''>")
-            $(insertion_gif).attr("src", homepage_data["insertion_gif"])
-            $(insertion).append(insertion_gif)
-            $(row).append(insertion)
+            $("#main_section").append(bubble)
 
-            let counting = $("<div class='col-md-4'>")
-            let counting_gif = $("<img class='gif' src=''>")
-            $(counting_gif).attr("src", homepage_data["counting_gif"])
-            $(counting).append(counting_gif)
-            $(row).append(counting)
-
-            $("#main_section").append(row)
-
-
-            row = $("<div class='row'>")
-
-            let next_section_div = $("<div>")
-            let next_section = $("<button id='next_section' class='btn btn-primary'>")
+            let next_section_div = $("<div class='center1'>")
+            let next_section = $("<button id='next_section' class='start_button'>")
             $(next_section).text("Get Sorted")
             $(next_section).click(function (e) {
                 window.location.href = "/learn/1";
             })
             $(next_section_div).append(next_section)
-            $(row).append(next_section_div)
 
-            $("#page").append(row)
+            $("#page").append(next_section_div)
         })
     </script>
 
     <div id="page" class="container">
         <div class="row">
-            <div id="main_section" class="col-md-12"></div>
+            <div id="main_section"></div>
         </div>
     </div>
 

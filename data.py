@@ -43,7 +43,7 @@ insertion_data = {
     'gif': 'https://s1.ax1x.com/2022/04/18/LaByLD.gif',
     'help': {
         'title': 'Introduction to Insertion Sort',
-        'description': "Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part. Algorithm To sort an array of size n in ascending order: 1: Iterate from arr[1] to arr[n] over the array. 2: Compare the current element (key) to its predecessor. 3: If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.",
+        'description': "Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.",
         'image': 'https://cdn.programiz.com/cdn/farfuture/l-X2VCkF2rp4i0X8mZX6BGJL_FQW9EL8PkKhBswQfpc/mtime:1582112622/sites/tutorial2program/files/Insertion-sort-0_1.png',
         'algorithm': {
             "1": "Iterate from arr[1] to arr[n] over the array.",
