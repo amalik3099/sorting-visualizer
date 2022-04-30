@@ -507,6 +507,11 @@ textarea {
     padding-top: 40px;
 }
 
+.step_text {
+    font-size: 24px;
+    padding-bottom: 40px;
+}
+
 
 .bar{
     height: 200px;
