@@ -6,31 +6,32 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 
 <script>
-    let quiz_data = {{quiz_data| tojson}}
-    let id = {{id| tojson}}
+    let quiz_data = {{ quiz_data| tojson}}
+    let id = {{ id| tojson}}
 </script>
 
 <div class="container">
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Quiz Help</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Quiz Help</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {{quiz_data.explanation}}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-body">
-            {{quiz_data.explanation}}
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
         </div>
     </div>
-    <div class="quizheader">Quiz</div>
+    <div class="quizheader">Quiz: Multiple choice (single answer)</div>
     <div class="row center topic">{{quiz_data.topic}}</div>
     <div class="row center quizquestion">
         {{quiz_data.prompt}}
@@ -38,11 +39,13 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg" id="option1">{{quiz_data.option1}}</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg"
+                id="option1">{{quiz_data.option1}}</button>
         </div>
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg" id="option2">{{quiz_data.option2}}</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg"
+                id="option2">{{quiz_data.option2}}</button>
         </div>
         <div class="col-2"></div>
 
@@ -51,16 +54,19 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg" id="option3">{{quiz_data.option3}}</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg"
+                id="option3">{{quiz_data.option3}}</button>
         </div>
         <div class="col-2"></div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-secondary btn-block btn-lg" id="option4">{{quiz_data.option4}}</button>
+            <button type="button" class="btn btn-outline-secondary btn-block btn-lg"
+                id="option4">{{quiz_data.option4}}</button>
         </div>
         <div class="col-2"></div>
     </div>
     <div class="error_handler" id="error_handler">
-        Please select an answer before moving on to the next question. If you need help, click on the help icon for hints on how to approach the question!
+        Please select an answer before moving on to the next question. If you need help, click on the help icon for
+        hints on how to approach the question!
     </div>
     <div class="bottombutton center">
         <button type="button" class="btn btn-primary btn-lg" id="next_btn" aria-label="Left Align">
@@ -74,7 +80,8 @@
         </div>
         <div class="col-md-2" id="help_btn_div">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" id="help_btn" data-toggle="modal" data-target="#exampleModalCenter">
+            <button type="button" class="btn btn-danger" id="help_btn" data-toggle="modal"
+                data-target="#exampleModalCenter">
                 Help?
             </button>
         </div>

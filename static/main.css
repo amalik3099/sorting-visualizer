@@ -334,16 +334,7 @@ textarea {
     }
 }
 
-.quizheader{
-    background-color: #b5e3ec;
-    padding: 40px;
-    font-size: 20px;
-}
 
-.quizquestion{
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
 
 .bottombutton{
     margin-top: 40px;
@@ -649,10 +640,24 @@ margin-left: 50px;
     color: lightyellow;
   }
 .quizoption{
-    margin-right: 0.5%;
-    margin-left: 0.5%;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 0;
 
 }
+
+.quizheader{
+    background-color: #b5e3ec;
+    padding: 40px;
+    font-size: 20px;
+}
+
+.quizquestion{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
 #sortable{
     padding-left: 30%;
 }
