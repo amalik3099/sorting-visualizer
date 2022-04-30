@@ -361,7 +361,7 @@ textarea {
 }
 .topic{
     margin-top: 15px;
-    size: 20px;
+    font-size: xx-large;
     font-weight: 700;
 }
 #help_div{
@@ -420,7 +420,7 @@ textarea {
 
 .start_button {
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 3px;
     background-color: #001E6C;
     border-width: 1px;
     text-align: center;
@@ -674,15 +674,15 @@ margin-left: 50px;
 }
 
 .quizquestion{
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-size: large;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 25px;
 }
 
 #next_btn{
     
     width: 160px;
-    height: 30px;
+    height: 40px;
     margin-left: 10px;
     border-width: 1px;
     border-radius: 3px;
