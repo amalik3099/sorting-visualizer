@@ -668,7 +668,11 @@ margin-left: 50px;
     margin-right: 15px;
     margin-left: 15px;
     padding: 0;
+    font-size: 20px;
 
+}
+.mc-choices{
+    size: 20px;
 }
 
 .quizbar{
@@ -690,6 +694,12 @@ margin-left: 50px;
     font-size: 25px;
 }
 
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 25px; //change this to your desired size
+    line-height: normal;
+}
+
 #next_btn{
     
     width: 160px;
@@ -703,6 +713,11 @@ margin-left: 50px;
     color:white
     
 }
+#progress_question{
+    color: grey;
+    font-size: large;
+    text-align: center;
+}
 
 #sortable{
     padding-left: 30%;
@@ -711,6 +726,37 @@ margin-left: 50px;
 #bb1{
     display: flex;
     flex-direction: row;
+}
+
+.score{
+    font-size: large;
+    padding-bottom: 20px;
+    padding-top:20px;
+    
+    /* background-color:#E0D8B0 ; */
+}
+
+.score_text{
+    background-color:#001E6C ;
+    padding: 10px;
+    color:white
+
+}
+
+.feedback{
+    font-size: medium;
+}
+
+#retry_btn{
+    width: 160px;
+    height: 40px;
+    margin-left: 10px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    background-color: #001E6C;
+    text-align: center;
+    color:white
 }
 
 
