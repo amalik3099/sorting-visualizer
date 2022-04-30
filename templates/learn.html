@@ -123,7 +123,11 @@
             }
 
             let next_div = $("<div>")
-            let next = $("<button id='next' class='next_button'>")
+            let next
+            if (id == 1)
+                next = $("<button id='next' class='first_next'>")
+            else
+                next = $("<button id='next' class='next_button'>")
             $(next).text("next")
             $(next).click(function (e) {
                 if (id == 6)
