@@ -1,5 +1,5 @@
 .container{
-    background-color: skyblue;
+    background-color: #FEFBE7;
 }
 
 .padding_zero {
@@ -29,6 +29,11 @@
 /* .navbar-dark .navbar-brand{
     color: #8ad0df;
 } */
+.bg-custom{
+    background-color: rgb(209, 236, 245);
+    font-size: large;
+}
+
 
 .primary_color {
     /* color: #9983e0; */
@@ -38,6 +43,15 @@
 
 .navbar-custom{
     background-color: #131313;
+}
+
+.brand_name{
+    font-size: large;
+}
+
+.dropdown_custom{
+    font-size: medium ;
+    
 }
 
 /* .btn-primary,
@@ -339,11 +353,7 @@ textarea {
 .bottombutton{
     margin-top: 40px;
 }
-.quizbar{
-    background-color: #1992a9;
-    height: 40px;
-    width: 50%;
-}
+
 .error_handler{
     margin-top: 20px;
     text-align: center;
@@ -411,12 +421,13 @@ textarea {
 .start_button {
     border-style: solid;
     border-radius: 10px;
-    background-color: #B9F8D3;
+    background-color: #001E6C;
     border-width: 1px;
     text-align: center;
     margin-top: 40px;
     width: 200px;
     height: 40px;
+    color:white
 }
 
 .bold_text {
@@ -424,25 +435,28 @@ textarea {
 }
 
 .back_button {
-    width: 60px;
-    height: 30px;
+    width: 80px;
+    height: 40px;
     margin-left: 120px;
     border-width: 1px;
     border-radius: 3px;
     border-style: solid;
     text-align: center;
-    background-color: #B9F8D3;
+    background-color: #001E6C;
+    color:white
 }
 
 .next_button {
-    width: 60px;
-    height: 30px;
+    width: 80px;
+    height: 40px;
     margin-left: 10px;
     border-width: 1px;
     border-radius: 3px;
     border-style: solid;
-    background-color: #B9F8D3;
+    background-color: #001E6C;
     text-align: center;
+    color:white;
+    
 }
 
 .center1 {
@@ -451,7 +465,7 @@ textarea {
 
 .sort_title {
     font-weight: bold;
-    color: #B9F8D3;
+    color:#001E6C;
     font-size: 60px;
     text-align: center;
     padding-top: 50px;
@@ -466,7 +480,7 @@ textarea {
 }
 
 .main_text {
-    color: dimgrey;
+    color: gray;
     font-size: 28px;
     padding-bottom: 40px;
 }
@@ -646,8 +660,15 @@ margin-left: 50px;
 
 }
 
+.quizbar{
+    background-color: skyblue;
+    height: 40px;
+    width: 50%;
+}
+
 .quizheader{
-    background-color: #b5e3ec;
+    background-color: #E0D8B0;
+    
     padding: 40px;
     font-size: 20px;
 }
@@ -658,6 +679,20 @@ margin-left: 50px;
     font-size: large;
 }
 
+#next_btn{
+    
+    width: 160px;
+    height: 30px;
+    margin-left: 10px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    background-color: #001E6C;
+    text-align: center;
+    color:white
+    
+}
+
 #sortable{
     padding-left: 30%;
 }
@@ -666,6 +701,7 @@ margin-left: 50px;
     display: flex;
     flex-direction: row;
 }
+
 
 
 
