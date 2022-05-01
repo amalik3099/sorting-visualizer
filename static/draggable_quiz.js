@@ -38,9 +38,30 @@ function submitRecord() {
     save_answer(new_record)
 }
 
-$(document).ready(function () {
-    $("#error_handler").hide()
 
+function showBars(quiz_data) {
+    $.each(quiz_data.input, function (index, val) {
+
+        let str1 = "#input".concat(index.toString());
+        let str2 = "#quizbar".concat(index.toString());
+        var parent = $(str1),
+            child = parent.children(str2);
+        child.height(val * 10)
+
+        $('#sortable').sortable({
+
+        });
+    });
+}
+
+
+$(document).ready(function () {
+
+    $("#error_handler").hide()
+    showBars(quiz_data);
+    $("#reset_btn").click(function () {
+        location.reload()
+    });
 
 
     $("#next_btn").click(function () {
@@ -50,4 +71,8 @@ $(document).ready(function () {
         window.location.href = "/quiz/" + (parseInt(quiz_data["id"]) + 1)
 
     })
+
+
+
+
 })

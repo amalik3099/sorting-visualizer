@@ -7,22 +7,29 @@
     quiz_data = {{ quiz_data | tojson }}
     id = {{ id | tojson }}
 
-    $(document).ready(function () {
-        $.each(quiz_data.input, function (index, val) {
+    // function showBars(quiz_data) {
+    //     $.each(quiz_data.input, function (index, val) {
 
-            let str1 = "#input".concat(index.toString());
-            let str2 = "#quizbar".concat(index.toString());
-            var parent = $(str1),
-                child = parent.children(str2);
-            child.height(val * 10)
+    //         let str1 = "#input".concat(index.toString());
+    //         let str2 = "#quizbar".concat(index.toString());
+    //         var parent = $(str1),
+    //             child = parent.children(str2);
+    //         child.height(val * 10)
 
-            $('#sortable').sortable({
+    //         $('#sortable').sortable({
 
-            });
-        });
+    //         });
+    //     });
+    // }
 
+    // $(document).ready(function () {
 
-    })
+    //     showBars(quiz_data);
+    //     $("#reset_btn").click(function () {
+    //         location.reload()
+    //     });
+
+    // })
 </script>
 <script type="text/javascript" src="{{ url_for('static', filename = 'draggable_quiz.js') }}"></script>
 
@@ -81,6 +88,13 @@
                 {{quiz_data.input[4]}}
             </div>
 
+        </div>
+
+        <div class="center topPadding">
+            <button type="button" class="btn btn-primary btn-lg next_button" id="reset_btn" aria-label="Left Align">
+                <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                <span>Reset</span>
+            </button>
         </div>
 
         <div class="bottombutton center">
