@@ -49,7 +49,8 @@ insertion_data = {
         'algorithm': {
             "1": "Iterate from arr[1] to arr[n] over the array.",
             "2": "Compare the current element (key) to its predecessor.",
-            "3": "If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element."
+            "3": "If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.",
+            "4": "The main difference between insertion sort and bubble sort is how the array would look after first iteration. That is there could be multiple swaps for same element (can travel displace position more than 1) after outer loop for insertion sort. Illustration on next page."
         },
         'worst_complexity': "O(n^2)",
         'best_complexity': "O(n)"
