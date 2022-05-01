@@ -195,14 +195,14 @@ quiz_data = {
         'id': '10',
         'type': 'multiple choice',
         'topic': 'Insertion Sort',
-        'prompt': 'Consider the array [6, 4, 8, 1, 3]. The cost of each move is 10 dollars. What is associated cost of insertion sort when element 4\
+        'prompt': 'Consider the array [6, 4, 8, 1, 3]. The cost of each move is 10 dollars. What is associated cost of insertion sort when element 1 (index 3)\
             reaches the first position of the array?',
         'option1': '0 dollars',
-        'option2': '10 dollars',
+        'option2': '20 dollars',
         'option3': '30 dollars',
         'option4': '5 dollars',
-        'answer': '10 dollars',
-        'explanation': 'When element 4 reaches the first position of the array, only 1 computation will be made. Therefore, the associated cost is 10 dollars.'
+        'answer': '20 dollars',
+        'explanation': 'When element in index 3 (1) reaches the first position of the array, only 2 computations will be made. Therefore, the associated cost is 20 dollars.'
     }
 }
 
