@@ -19,7 +19,8 @@ bubble_data = {
             '3': 'Now, compare the second and the third elements. Swap them if they are not in order.',
             '4': 'The above process goes on until the last element.'
         },
-        'complexity': "O(n2)" 
+        'worst_complexity': "O(n^2)",
+        'best_complexity': "O(n)"
     },
     'Step1': {
         'array': [29, 10, 14, 37],
@@ -50,7 +51,8 @@ insertion_data = {
             "2": "Compare the current element (key) to its predecessor.",
             "3": "If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element."
         },
-        'complexity': "O(n2)" 
+        'worst_complexity': "O(n^2)",
+        'best_complexity': "O(n)"
     },
     'Step1': {
         'array': [29, 10, 14, 37],

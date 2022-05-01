@@ -48,7 +48,8 @@
                 }
 
                 let complexity = $("<div class='complexity'>")
-                $(complexity).text("Time complexity: " + data['help'].complexity)
+                $(complexity).append("<div> Best Case Time complexity: " + data['help'].best_complexity + "</div>")
+                $(complexity).append("<div> Worst Case Time complexity: " + data['help'].worst_complexity + "</div>")
                 $(algo_div).append(complexity)
 
                 $(row).append(algo_div)
