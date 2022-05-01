@@ -148,18 +148,15 @@ quiz_data = {
         'id': '7',
         'type': 'multiple choice',
         'topic': 'Bubble Sort',
-        'prompt': 'The number of swaps required to sort the array [8, 22, 7, 9, 31, 5, 13] in ascending order is: ',
-        'option1': '9',
+        'prompt': 'The number of swaps required to sort the array [8, 22, 7, 9, 31] in ascending order is: ',
+        'option1': '4',
         'option2': '10',
-        'option3': '15',
+        'option3': '3',
         'option4': '21',
-        'answer': '10',
-        'explanation': '1 : 8, 7, 9, 22, 5, 13, 31 = 4 swaps, \
-            2 : 7, 8, 9, 5, 13, 22, 31 = 3 swaps, \
-            3 : 7, 8, 5, 9, 13, 22, 31 = 1 swap, \
-            4 : 7, 5, 8, 9, 13, 22, 31 = 1 swap, \
-            5 : 5, 7, 8, 9, 13, 22, 31 = 1 swap. \
-            Total 10 swaps are required to sort the array.'
+        'answer': '3',
+        'explanation': '1 : 8, 7, 9, 22, 31 = 2 swaps, \
+            2 : 7, 8, 9, 22, 31 = 1 swaps, \
+            Total 3 swaps are required to sort the array.'
     },
     "8": {
         'id': '8',
