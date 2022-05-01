@@ -69,6 +69,7 @@ $(document).ready(function () {
     $("#next_btn").click(function() {
         if (value == "") {
             $("#error_handler").show()
+            $("#error_handler").css("visibility", "visible")
         }
         else {
             $("#error_handler").hide()
