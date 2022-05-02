@@ -19,7 +19,8 @@ bubble_data = {
             '3': 'Now, compare the second and the third elements. Swap them if they are not in order.',
             '4': 'The above process goes on until the last element.'
         },
-        'complexity': "O(n2)" 
+        'worst_complexity': "O(n^2)",
+        'best_complexity': "O(n)"
     },
     'Step1': {
         'array': [29, 10, 14, 37],
@@ -48,9 +49,11 @@ insertion_data = {
         'algorithm': {
             "1": "Iterate from arr[1] to arr[n] over the array.",
             "2": "Compare the current element (key) to its predecessor.",
-            "3": "If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element."
+            "3": "If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.",
+            "4": "The main difference between insertion sort and bubble sort is how the array would look after first iteration. That is there could be multiple swaps for same element (can travel displace position more than 1) after outer loop for insertion sort. Illustration on next page."
         },
-        'complexity': "O(n2)" 
+        'worst_complexity': "O(n^2)",
+        'best_complexity': "O(n)"
     },
     'Step1': {
         'array': [29, 10, 14, 37],
@@ -145,18 +148,15 @@ quiz_data = {
         'id': '7',
         'type': 'multiple choice',
         'topic': 'Bubble Sort',
-        'prompt': 'The number of swaps required to sort the array [8, 22, 7, 9, 31, 5, 13] in ascending order is: ',
-        'option1': '9',
+        'prompt': 'The number of swaps required to sort the array [8, 22, 7, 9, 31] in ascending order is: ',
+        'option1': '4',
         'option2': '10',
-        'option3': '15',
+        'option3': '3',
         'option4': '21',
-        'answer': '10',
-        'explanation': '1 : 8, 7, 9, 22, 5, 13, 31 = 4 swaps, \
-            2 : 7, 8, 9, 5, 13, 22, 31 = 3 swaps, \
-            3 : 7, 8, 5, 9, 13, 22, 31 = 1 swap, \
-            4 : 7, 5, 8, 9, 13, 22, 31 = 1 swap, \
-            5 : 5, 7, 8, 9, 13, 22, 31 = 1 swap. \
-            Total 10 swaps are required to sort the array.'
+        'answer': '3',
+        'explanation': '1 : 8, 7, 9, 22, 31 = 2 swaps, \
+            2 : 7, 8, 9, 22, 31 = 1 swaps, \
+            Total 3 swaps are required to sort the array.'
     },
     "8": {
         'id': '8',
@@ -192,14 +192,14 @@ quiz_data = {
         'id': '10',
         'type': 'multiple choice',
         'topic': 'Insertion Sort',
-        'prompt': 'Consider the array [6, 4, 8, 1, 3]. The cost of each move is 10 dollars. What is associated cost of insertion sort when element 4\
+        'prompt': 'Consider the array [6, 4, 8, 1, 3]. The cost of each move is 10 dollars. What is associated cost of insertion sort when element 1 (index 3)\
             reaches the first position of the array?',
         'option1': '0 dollars',
-        'option2': '10 dollars',
+        'option2': '20 dollars',
         'option3': '30 dollars',
         'option4': '5 dollars',
-        'answer': '10 dollars',
-        'explanation': 'When element 4 reaches the first position of the array, only 1 computation will be made. Therefore, the associated cost is 10 dollars.'
+        'answer': '20 dollars',
+        'explanation': 'When element in index 3 (1) reaches the first position of the array, only 2 computations will be made. Therefore, the associated cost is 20 dollars.'
     }
 }
 
