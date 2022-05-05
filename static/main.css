@@ -769,4 +769,21 @@ margin-left: 50px;
     color:white
 }
 
+#home_btn{
+    width: 160px;
+    height: 40px;
+    margin-left: 10px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    background-color: #001E6C;
+    text-align: center;
+    color:white
+}
+
+#bubble_img{
+    position: relative;
+    bottom: 50px;
+    height: 400px;
+}
 
