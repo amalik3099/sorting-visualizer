@@ -40,4 +40,8 @@ $(document).ready(function () {
     $("#retry_btn").click(function () {
         window.location.href = "/quiz/" + 1
     })
+    $("#home_btn").click(function () {
+        window.location.href = "/" 
+    })
+    
 })

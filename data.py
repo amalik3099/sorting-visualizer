@@ -14,10 +14,10 @@ bubble_data = {
         'description': "Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order. Bubble sort is a sorting algorithm that compares two adjacent elements and swaps them until they are not in the intended order. Just like the movement of air bubbles in the water that rise up to the surface, each element of the array move to the end in each iteration. Therefore, it is called a bubble sort.",
         'image': "https://cdn.programiz.com/cdn/farfuture/kn1zM7ZGIj60jcTe3mv8gAtbrvFHqxgqfQ7F9MdjPuA/mtime:1582112622/sites/tutorial2program/files/Bubble-sort-0.png",
         'algorithm': {
-            '1': 'Starting from the first index, compare the first and the second elements.',
-            '2': 'If the first element is greater than the second element, they are swapped.',
-            '3': 'Now, compare the second and the third elements. Swap them if they are not in order.',
-            '4': 'The above process goes on until the last element.'
+            '1': 'Starting from the first index, compare the first and the second elements. We can see -2 and 45 getting swapped on right.',
+            '2': 'If the first element is greater than the second element, they are swapped. So, swap 45 and 0.',
+            '3': 'Now, compare the third (45) element and the fourth (11) element. Since, 45 is greater than 11 they are swaped. ',
+            '4': 'The above process goes on until the last element. Lastly, 45 and -9 are swapped since 45 > -9'
         },
         'worst_complexity': "O(n^2)",
         'best_complexity': "O(n)"
