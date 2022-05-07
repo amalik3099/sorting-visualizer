@@ -43,7 +43,7 @@
 
                 for (key in data["help"].algorithm) {
                     let algo = $("<div class='algo'>")
-                    $(algo).text(key + ": " + data["help"].algorithm[key])
+                    $(algo).html(key + ": " + data["help"].algorithm[key])
                     $(algo_div).append(algo)
                 }
 
@@ -55,7 +55,7 @@
                 $(row).append(algo_div)
 
                 let gif_div = $("<div class='col-6'>")
-                let gif = $("<img class='gif' src=''>")
+                let gif = $(`<img class='gif' style="height: 440px;" id='bubble_img' src=''>`)
                 $(gif).attr("src", data["help"].image)
                 $(gif_div).append(gif)
                 $(row).append(gif_div)
