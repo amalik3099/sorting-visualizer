@@ -64,14 +64,13 @@ $(document).ready(function () {
         location.reload()
     });
 
-    $("#quizsubmit_btn").click(function () {
-        submitRecord()
 
-    })
 
     $("#next_btn").click(function () {
+        submitRecord()
+        var delay = 2000;
+        setTimeout(function () { window.location.href = "/quiz/" + (parseInt(quiz_data["id"]) + 1); }, delay);
 
-        window.location.href = "/quiz/" + (parseInt(quiz_data["id"]) + 1)
 
     })
 

@@ -67,18 +67,7 @@ $(document).ready(function () {
         value = $("#option4").text()
         console.log(value)
     })
-    $("#quizsubmit_btn").click(function () {
 
-        if (value == "") {
-            $("#error_handler").show()
-            $("#error_handler").css("visibility", "visible")
-        }
-        else {
-            $("#error_handler").hide()
-            console.log("submitrecord")
-            submitRecord(value)
-        }
-    })
     $("#next_btn").click(function () {
         if (value == "") {
             $("#error_handler").show()
@@ -86,7 +75,10 @@ $(document).ready(function () {
         }
         else {
             $("#error_handler").hide()
-            window.location.href = "/quiz/" + (parseInt(quiz_data["id"]) + 1)
+            submitRecord(value)
+            var delay = 2000;
+            setTimeout(function () { window.location.href = "/quiz/" + (parseInt(quiz_data["id"]) + 1); }, delay);
+
         }
     })
 })
