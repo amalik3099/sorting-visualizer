@@ -1,16 +1,17 @@
-function save_answer(new_item) {        
+function save_answer(new_item) {
     $.ajax({
         type: "POST",
-        url: "save_answer",                
-        dataType : "json",
+        url: "save_answer",
+        dataType: "json",
         contentType: "application/json; charset=utf-8",
-        data : JSON.stringify(new_item),
-        success: function(result){
+        data: JSON.stringify(new_item),
+        success: function (result) {
             let answer = result
             // window.location.href="/view/" + curr_id
-            console.log(answer)
+            console.log("result", answer)
+            $("#quiz_res").html(answer)
         },
-        error: function(request, status, error){
+        error: function (request, status, error) {
             console.log("Error");
             console.log(request)
             console.log(status)
@@ -22,7 +23,7 @@ function save_answer(new_item) {
 function submitRecord(value) {
     // create a new record with inputs from client and reams box 
     new_record = {}
-    $("#option1", "#option2", "#option3", "#option4").click(function() {
+    $("#option1", "#option2", "#option3", "#option4").click(function () {
         if (this.id == 'option1') {
             value = $("#option1").val()
         }
@@ -46,35 +47,46 @@ function submitRecord(value) {
 $(document).ready(function () {
     $("#error_handler").hide()
     let value = ""
-    $("#option1").click(function() {
+    $("#option1").click(function () {
         $("#error_handler").hide()
         value = $("#option1").text()
         console.log(value)
     })
-    $("#option2").click(function() {
+    $("#option2").click(function () {
         $("#error_handler").hide()
         value = $("#option2").text()
         console.log(value)
     })
-    $("#option3").click(function() {
+    $("#option3").click(function () {
         $("#error_handler").hide()
         value = $("#option3").text()
         console.log(value)
     })
-    $("#option4").click(function() {
+    $("#option4").click(function () {
         $("#error_handler").hide()
         value = $("#option4").text()
         console.log(value)
     })
-    $("#next_btn").click(function() {
+    $("#quizsubmit_btn").click(function () {
+
         if (value == "") {
             $("#error_handler").show()
             $("#error_handler").css("visibility", "visible")
         }
         else {
             $("#error_handler").hide()
+            console.log("submitrecord")
             submitRecord(value)
-            window.location.href="/quiz/" + (parseInt(quiz_data["id"])+1)
         }
-    }) 
+    })
+    $("#next_btn").click(function () {
+        if (value == "") {
+            $("#error_handler").show()
+            $("#error_handler").css("visibility", "visible")
+        }
+        else {
+            $("#error_handler").hide()
+            window.location.href = "/quiz/" + (parseInt(quiz_data["id"]) + 1)
+        }
+    })
 })

@@ -758,6 +758,11 @@ margin-left: 50px;
     font-size: medium;
 }
 
+#quiz_res{
+    font-size: larger;
+    color: red;
+}
+
 #retry_btn{
     width: 160px;
     height: 40px;

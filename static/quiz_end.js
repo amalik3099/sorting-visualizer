@@ -28,7 +28,7 @@ function calc_score() {
     let bubble_overall = (bubble_score / 5) * 100
     let insertion_overall = (insertion_score / 5) * 100
     let bubble_div = $('<div>').html('Your Bubble Sort Score on Question 1, 2, 5, 6, 7 is: ' + bubble_overall + '%')
-    let insertion_div = $('<div>').html('Your Insertion Sort Score on Question 2, 3, 8, 9, 10 is: ' + insertion_overall + '%')
+    let insertion_div = $('<div>').html('Your Insertion Sort Score on Question 3, 4, 8, 9, 10 is: ' + insertion_overall + '%')
     $("#breakdown_div").append(bubble_div)
     $("#breakdown_div").append('<br>')
     $("#breakdown_div").append(insertion_div)

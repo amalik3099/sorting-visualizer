@@ -8,7 +8,8 @@ function save_answer(new_item) {
         success: function (result) {
             let answer = result
             // window.location.href="/view/" + curr_id
-            console.log(answer)
+
+            $("#quiz_res").html(answer)
         },
         error: function (request, status, error) {
             console.log("Error");
@@ -63,11 +64,13 @@ $(document).ready(function () {
         location.reload()
     });
 
+    $("#quizsubmit_btn").click(function () {
+        submitRecord()
+
+    })
 
     $("#next_btn").click(function () {
 
-        $("#error_handler").hide()
-        submitRecord()
         window.location.href = "/quiz/" + (parseInt(quiz_data["id"]) + 1)
 
     })

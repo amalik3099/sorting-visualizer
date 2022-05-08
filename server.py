@@ -1,3 +1,4 @@
+import datetime
 from collections import defaultdict
 from glob import glob
 from urllib import response
@@ -6,7 +7,6 @@ from flask import render_template
 from flask import Response, request, jsonify
 import data
 app = Flask(__name__)
-import datetime
 
 homepage_data = data.get_homepage_data()
 bubble_data = data.get_bubble_data()
@@ -38,9 +38,9 @@ def learn(id=None):
     times_data.append({
         'id': id,
         'time': datetime.datetime.now()
-    });
-    print(times_data[-1]);
-    # user_time = times_data[-1].time - times_data[0].time 
+    })
+    print(times_data[-1])
+    # user_time = times_data[-1].time - times_data[0].time
     response = make_response(render_template(
         'learn.html', bubble_data=bubble_data, insertion_data=insertion_data, id=id))
     response.headers['Cache-Control'] = header_age
@@ -75,16 +75,23 @@ def quiz(id=None):
 
 @app.route('/quiz/save_answer', methods=['GET', 'POST'])
 def save_answer():
-    global user_answers 
+    global user_answers
     global current_id
+    global quiz_data
 
-    answer = request.get_json()  
-    # add new entry to array with 
+    answer = request.get_json()
+    # add new entry to array with
     # a new id and the name the user sent in JSON
     current_id += 1
     user_answers[str(current_id)] = answer['answer']
-    #send back id of new watch
-    return jsonify(user_answers=user_answers)
+    print(quiz_data[str(current_id)]['answer'])
+    print("user_answer", answer['answer'])
+    if answer['answer'] == quiz_data[str(current_id)]['answer']:
+        return jsonify("correct!")
+    else:
+        return jsonify("wrong!")
+    # send back id of new watch
+    # return jsonify(user_answers=user_answers)
 
 
 if __name__ == '__main__':
