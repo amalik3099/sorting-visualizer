@@ -14,21 +14,21 @@ function calc_score() {
             score = score + 1
             if (quiz_data[String(i)]['topic'] == "Bubble Sort") { bubble_score = bubble_score + 1 }
             if (quiz_data[String(i)]['topic'] == "Insertion Sort") { insertion_score = insertion_score + 1 }
-            let temp_correct = $('<div>').html('<div id="feedback_q">Question ' + i + '</div><div id="ans_tick">' + '&#10004;' + '</div>')
+            let temp_correct = $('<div>').html('<div id="feedback_q">Question ' + i + ': ' + quiz_data[String(i)]['topic'] + ' ' + '</div><div id="ans_tick">' + '&#10004;' + '</div>')
             // let new_div = $('<div>').attr('id','name_div').attr('data-name',value).attr('data-parent', cont)
             // $(new_div).html(value)
             // $('#step2').html('<span>Step 2</span><img id ="tick" src="../static/data/tick.png" alt="there should" srcset="">')
             $("#feedback_div").append(temp_correct)
         }
         else {
-            let temp_wrong = $('<div>').html('<div id="feedback_q">Question ' + i + '</div><div id="ans_wrong">' + '&times;' + '</div>')
+            let temp_wrong = $('<div>').html('<div id="feedback_q">Question ' + i + ': ' + quiz_data[String(i)]['topic'] + ' ' + '</div><div id="ans_wrong">' + '&times;' + '</div>')
             $("#feedback_div").append(temp_wrong)
         }
     }
     let bubble_overall = (bubble_score / 5) * 100
     let insertion_overall = (insertion_score / 5) * 100
-    let bubble_div = $('<div>').html('Your Bubble Sort Score on Question 1, 2, 5, 6, 7 is: ' + bubble_overall + '%')
-    let insertion_div = $('<div>').html('Your Insertion Sort Score on Question 3, 4, 8, 9, 10 is: ' + insertion_overall + '%')
+    let bubble_div = $('<div>').html('Your Bubble Sort Score is: ' + bubble_overall + '%')
+    let insertion_div = $('<div>').html('Your Insertion Sort Score is: ' + insertion_overall + '%')
     $("#breakdown_div").append(bubble_div)
     $("#breakdown_div").append('<br>')
     $("#breakdown_div").append(insertion_div)
