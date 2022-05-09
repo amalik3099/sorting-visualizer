@@ -6,3 +6,9 @@ Sorting visualizer to introduce students to different sorting algorithms, how th
 
 - Iteration 2 Demo:
 - https://youtu.be/ZzpxNTrZunA
+
+- Iteration 3 Demo:
+- https://www.youtube.com/watch?v=ZwQhJ1XsQ08
+
+- Final Demo:
+- https://www.youtube.com/watch?v=RDDIYerBwyY
